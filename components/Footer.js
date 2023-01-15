@@ -1,6 +1,6 @@
 import { FingerPrintIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { FaLinkedin} from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa";
 
 const navigation = {
   main: [
@@ -62,6 +62,7 @@ export default function Footer() {
             width={80}
             height={80}
             className="pb-4"
+            alt="Logo"
           />
           <h1>Logiciels, Solutions Web, Réseau, Sécurité</h1>
           <h1 className="font-bold text-primaryBlue">Un seul partenaire.</h1>

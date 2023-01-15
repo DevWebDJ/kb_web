@@ -14,7 +14,7 @@ const Clients = () => {
             <p className="mt-3 max-w-3xl text-lg text-gray-500 pb-5">
               Nous remplissons les objectifs que nos clients nous ont fixés avec
               la même exigence, et nous veillons à les satisfaire et a créer une
-              relation de confiance pour travailler avec chacun d'eux sur le
+              relation de confiance pour travailler avec chacun d&apos;eux sur le
               long terme
             </p>
             <div className="max-w-fit">

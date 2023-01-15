@@ -9,6 +9,7 @@ const HeroTwo = () => {
         width={200}
         height={143}
         className="absolute -left-14 hidden lg:block"
+        alt="Dots"
       />
       <div className="mt-24">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
@@ -19,23 +20,24 @@ const HeroTwo = () => {
                 height={29}
                 width={394}
                 className=" rotate-90 w-5 absolute top-0 right-1/3 -scale-x-100"
+                alt="Zigzag"
               />
               <div className="mt-6">
                 <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-gray-900 text-center lg:text-left">
                   Notre{" "}
                   <span className="text-primaryBlue font-black">Force</span>{" "}
-                  c'est notre{" "}
+                  c&apos;est notre{" "}
                   <span className="text-primaryBlue font-black">
                     Savoir-Faire
                   </span>
                 </h2>
                 <p className="mt-4 text-lg text-gray-500 text-justify">
                   KB Développement a déjà aidé plus de 1000 clients grâce à
-                  l'expertise de son équipe et sa détermination à trouver la
-                  solution adaptée aux besoins de ses clients, quels que soient
-                  leur secteur d'activité (commerce, industrie, hôpitaux,
-                  institutions, etc.). Nous sommes fiers de pouvoir apporter
-                  notre contribution à leur réussite.
+                  l&apos;expertise de son équipe et sa détermination à trouver
+                  la solution adaptée aux besoins de ses clients, quels que
+                  soient leur secteur d&apos;activité (commerce, industrie,
+                  hôpitaux, institutions, etc.). Nous sommes fiers de pouvoir
+                  apporter notre contribution à leur réussite.
                 </p>
               </div>
             </div>
@@ -43,13 +45,13 @@ const HeroTwo = () => {
 
           <div className="">
             <div className="">
-            <Image
-              className="lg:w-full"
-              src={"/assets/test.gif"}
-              height={1000}
-              width={1000}
-              alt="Customer profile user interface"
-            />
+              <Image
+                className="lg:w-full"
+                src={"/assets/test.gif"}
+                height={1000}
+                width={1000}
+                alt="Customer profile user interface"
+              />
               {/* rounded-xl shadow-xl ring-1 ring-black ring-opacity-5  */}
             </div>
           </div>

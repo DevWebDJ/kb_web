@@ -122,6 +122,7 @@ export default function Navbar() {
                                   src="/sparkle.gif"
                                   height={50}
                                   width={25}
+                                  alt="sparkles"
                                 />
                               </span>
                               <span className="ml-3 inline-flex items-center rounded-full bg-indigo-100 px-3 py-0.5 text-xs leading-5 font-semibold text-primaryBlue">

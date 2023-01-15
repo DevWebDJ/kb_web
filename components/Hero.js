@@ -10,6 +10,7 @@ const Hero = () => {
           width={243}
           height={174}
           className="lg:absolute lg:left-[50%] lg:top-2 lg:-z-10 w-1/3 lg:w-auto"
+          alt="Udots"
         />
         <div className=" bg-heroimg bg-center flex md:block w-[60%] lg:w-[900px] lg:h-[460px] rounded-l-full overflow-hidden shadow-black shadow-[inset_0px_0px_23px_rgba(0,0,0,0.25)]">
           <div className="w-full h-full -z-10" />
@@ -18,6 +19,7 @@ const Hero = () => {
             width={243}
             height={174}
             className="absolute right-0 -mt-11  -z-10 hidden lg:block"
+            alt="Bottom Dots"
           />
         </div>
       </div>
@@ -29,6 +31,7 @@ const Hero = () => {
             width={200}
             height={143}
             className="relative lg:-left-[200%] -left-[198%] -top-36"
+            alt="Dots"
           />
         </div>
         <div className="max-w-lg leading-9 flex flex-col gap-y-5 text-center lg:text-left">
@@ -48,7 +51,12 @@ const Hero = () => {
           Faites confiance à notre expertise pour améliorer la gestion de votre
           entreprise.
         </p>
-        <Image src={"/assets/hero_zigzag.svg"} width={257} height={40} />
+        <Image
+          src={"/assets/hero_zigzag.svg"}
+          width={257}
+          height={40}
+          alt="Zigzag"
+        />
 
         <div className="max-w-fit">
           <div className="flex gap-4">
@@ -70,6 +78,7 @@ const Hero = () => {
             height={170}
             width={104}
             className=" -rotate-8 float-right  pt-1"
+            alt="CTA Arrow GIF"
           />
         </div>
       </div>

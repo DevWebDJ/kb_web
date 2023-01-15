@@ -1,9 +1,21 @@
-import React from 'react'
+// import { useEffect, useRef, useState } from 'react';
+// import type { LottiePlayer } from 'lottie-web';
 
-const test = () => {
-  return (
-    <div>test</div>
-  )
-}
+// // const Test: FC = () => {
+// //   const ref = useRef(null);
+// //   useEffect(() => {
+// //       import('@lottiefiles/lottie-player');
+// //   });
 
-export default test
+// //   return (
+// //     <div><lottie-player
+// //     id="firstLottie"
+// //     ref={ref}
+// //     autoplay
+// //     mode="normal"
+// //     src="here your json link/find on lottie website"
+// // /></div>
+// //   )
+// // }
+
+// // export default Test

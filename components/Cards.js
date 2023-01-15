@@ -23,8 +23,9 @@ const Cards = () => {
         <p className="mt-4 text-lg text-gray-500 text-justify max-w-3xl px-6 lg:px-2">
           Notre entreprise, Sarl KB Développement, offre une large gamme de
           services informatiques allant de la conception de logiciels de gestion
-          à l'installation et la maintenance de parcs informatiques, en passant
-          par la prestation de services adaptés aux besoins de l'entreprise.
+          à l&apos;installation et la maintenance de parcs informatiques, en
+          passant par la prestation de services adaptés aux besoins de
+          l&apos;entreprise.
         </p>
       </div>
       <Swiper
@@ -61,8 +62,8 @@ const Cards = () => {
         modules={[Autoplay]}
       >
         {services.map((item) => (
-          <div className="">
-            <SwiperSlide key={item.name}>
+          <div className="" key={item.name}>
+            <SwiperSlide>
               {/* Overlapping cards */}
               <section
                 className="relative z-10 mx-auto mt-10  px-4 sm:px-6 lg:px-8 select-none py-10"

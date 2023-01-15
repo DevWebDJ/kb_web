@@ -34,6 +34,7 @@ export default function Home() {
               height={90}
               width={500}
               className="absolute right-0"
+              alt="Dots"
             />
             <Cards />
           </div>
@@ -45,10 +46,11 @@ export default function Home() {
                 height={344}
                 width={550}
                 className=" h-48 w-auto "
+                alt="Emojis Reaction"
               />
               <h1 className="text-white text-xl font-bold">
-                suivez-nous sur facebook et retrouvez toute l'actualité de KB
-                Développement
+                suivez-nous sur facebook et retrouvez toute l&apos;actualité de
+                KB Développement
               </h1>
               <ArrowTopRightOnSquareIcon className="h-8 w-8 text-white" />
             </div>
