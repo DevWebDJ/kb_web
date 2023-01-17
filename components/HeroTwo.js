@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import Lottie from "lottie-react";
+import Teamwork from "/public/assets/teamwork.json";
 
 const HeroTwo = () => {
   return (
@@ -42,18 +44,12 @@ const HeroTwo = () => {
               </div>
             </div>
           </div>
-
-          <div className="">
-            <div className="">
-              <Image
-                className="lg:w-full"
-                src={"/assets/test.gif"}
-                height={1000}
-                width={1000}
-                alt="Customer profile user interface"
-              />
-              {/* rounded-xl shadow-xl ring-1 ring-black ring-opacity-5  */}
-            </div>
+          <div className="flex items-center justify-center">
+            <Lottie
+              loop
+              animationData={Teamwork}
+              className="lg:w-full w-1/2 "
+            />
           </div>
         </div>
       </div>

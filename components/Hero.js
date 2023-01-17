@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -64,7 +65,7 @@ const Hero = () => {
               type="button"
               className="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-9 py-2 text-sm font-medium leading-4 text-PBD hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2"
             >
-              Nos Produits
+              <Link href={"/services"}>Nos Services</Link>
             </button>
             <button
               type="button"

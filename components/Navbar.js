@@ -16,6 +16,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { services } from "../data/constant";
+import Link from "next/link";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -27,14 +28,14 @@ export default function Navbar() {
       <div className="mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start items-center gap-3 lg:w-0 lg:flex-1">
-            <a href="#">
+            <Link href="/">
               <span className="sr-only">Développement</span>
               <img
                 className="h-10 w-auto sm:h-12 md:h-10"
                 src="/logo_small.svg"
                 alt="Logo KB"
               />
-            </a>
+            </Link>
             <h1 className="text-[#1257A3] font-semibold lg:text-xl text-base">
               Développement
             </h1>
