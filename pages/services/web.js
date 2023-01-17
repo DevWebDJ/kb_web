@@ -1,5 +1,5 @@
-import { CameraIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Layout from "../../components/Layout";
 
@@ -33,10 +33,10 @@ const Web = () => {
             <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
-                  <h2 className="text-lg font-semibold text-primaryBlue uppercase">
-                    Service
+                  <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
+                    <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     Développement application web & site internet
                   </h3>
                 </div>
@@ -46,23 +46,14 @@ const Web = () => {
                   <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                     <figure>
                       <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                        <img
-                          className="rounded-lg object-cover object-center shadow-lg"
-                          src="https://images.unsplash.com/photo-1546913199-55e06682967e?ixlib=rb-1.2.1&auto=format&fit=crop&crop=focalpoint&fp-x=.735&fp-y=.55&w=1184&h=1376&q=80"
-                          alt="Whitney leaning against a railing on a downtown street"
-                          width={1184}
-                          height={1376}
+                        <Image
+                          className="rounded-lg object-contain"
+                          src="/assets/laptop.png"
+                          alt="Laptop with website"
+                          width={1000}
+                          height={625}
                         />
                       </div>
-                      <figcaption className="mt-3 flex text-sm text-gray-500">
-                        <CameraIcon
-                          className="h-5 w-5 flex-none text-gray-400"
-                          aria-hidden="true"
-                        />
-                        <span className="ml-2">
-                          Photograph by Marcus O’Leary
-                        </span>
-                      </figcaption>
                     </figure>
                   </div>
                 </div>
@@ -96,6 +87,14 @@ const Web = () => {
                         entreprise de manière professionnelle.
                       </li>
                     </ul>
+                  </div>
+                  <div className="flex items-center justify-center translate-y-4">
+                    <button
+                      type="button"
+                      className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
+                    >
+                      Demander un Devis
+                    </button>
                   </div>
                 </div>
               </div>

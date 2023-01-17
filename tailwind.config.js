@@ -21,6 +21,7 @@ module.exports = {
         PBD: "#006DFC",
         g1: "#1673D8",
         g2: "#004FA5",
+        black: "#252525",
       },
     },
   },
