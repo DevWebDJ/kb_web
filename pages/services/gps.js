@@ -1,4 +1,3 @@
-import { MapPinIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -32,7 +31,7 @@ const Gps = () => {
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
                     Système de géolocalisation (GPS)
                   </h3>
                 </div>
@@ -73,9 +72,9 @@ const Gps = () => {
                         fournir des installations rapides et efficaces.
                       </p>
                       <p>
-                        N'hésitez pas à nous contacter pour en savoir plus sur
-                        notre système de géolocalisation et sur les services que
-                        nous proposons.
+                        N&apos;hésitez pas à nous contacter pour en savoir plus
+                        sur notre système de géolocalisation et sur les services
+                        que nous proposons.
                       </p>
                       <button
                         type="button"

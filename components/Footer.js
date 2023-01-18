@@ -1,6 +1,7 @@
 import { FingerPrintIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
+import Copyright from "./Copyright";
 
 const navigation = {
   main: [
@@ -111,9 +112,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-base text-gray-400">
-          &copy; 2023 KB Développement, All rights reserved.
-        </p>
+        <Copyright />
       </div>
     </footer>
   );

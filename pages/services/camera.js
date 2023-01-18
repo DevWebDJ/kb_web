@@ -31,7 +31,7 @@ const Camera = () => {
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
                     Installation caméra de surveillance
                   </h3>
                 </div>
@@ -47,7 +47,7 @@ const Camera = () => {
                   </div>
                   <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                     <div className="mt-4 flex flex-col lg:flex-row justify-center items-center lg:gap-10">
-                    <Lottie loop animationData={cctv} className=" " />
+                      <Lottie loop animationData={cctv} className=" " />
                       <ul role="list" className="w-1/2 text-justify">
                         <li>
                           Nous mettons en place un système de télésurveillance
@@ -56,7 +56,7 @@ const Camera = () => {
                           infra-rouge, etc.)
                         </li>
                         <li>
-                          Nos solutions s'intègrent à des plateformes de
+                          Nos solutions s&apos;intègrent à des plateformes de
                           différentes tailles et genres, grâce à une
                           compatibilité des produits assurée, fiable et
                           efficace.
@@ -65,9 +65,9 @@ const Camera = () => {
                     </div>
                     <div className="mx-auto w-4/5 text-center">
                       <p>
-                        N'hésitez pas à nous contacter pour en savoir plus sur
-                        notre système de télésurveillance et sur les services
-                        que nous proposons.
+                        N&apos;hésitez pas à nous contacter pour en savoir plus
+                        sur notre système de télésurveillance et sur les
+                        services que nous proposons.
                       </p>
                       <p>
                         Nous serons heureux de répondre à vos questions et de

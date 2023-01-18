@@ -100,7 +100,7 @@ const Web = () => {
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h3 className="mt-2 text-3xl text-center lg:text-left lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
                     Développement application web & site internet
                   </h3>
                 </div>
@@ -145,14 +145,6 @@ const Web = () => {
                         entreprise de manière professionnelle.
                       </li>
                     </ul>
-                  </div>
-                  <div className="flex items-center justify-center translate-y-4">
-                    <button
-                      type="button"
-                      className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
-                    >
-                      Demander un Devis
-                    </button>
                   </div>
                 </div>
               </div>
