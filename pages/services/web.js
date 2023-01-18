@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Layout from "../../components/Layout";
+import Lottie from "lottie-react";
+import web from "../../public/assets/web.json";
 
 import { CheckIcon } from "@heroicons/react/24/outline";
 
@@ -108,13 +110,7 @@ const Web = () => {
                   <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                     <figure>
                       <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                        <Image
-                          className="rounded-lg object-contain"
-                          src="/assets/laptop.png"
-                          alt="Laptop with website"
-                          width={1000}
-                          height={625}
-                        />
+                        <Lottie loop animationData={web} className=" " />
                       </div>
                     </figure>
                   </div>
@@ -168,7 +164,9 @@ const Web = () => {
             Créez votre présence en ligne avec nos offres
           </h2>
           <p className="mt-6 max-w-2xl text-xl text-gray-500">
-          Choisissez parmi nos offres abordables et surprenantes pour donner vie à votre présence en ligne, fidéliser votre clientèle et booster vos ventes. Une expérience utilisateur exceptionnelle vous attend !
+            Choisissez parmi nos offres abordables et surprenantes pour donner
+            vie à votre présence en ligne, fidéliser votre clientèle et booster
+            vos ventes. Une expérience utilisateur exceptionnelle vous attend !
           </p>
 
           {/* Tiers */}

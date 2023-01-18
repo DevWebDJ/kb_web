@@ -112,8 +112,8 @@ export default function Navbar() {
                           ))}
                         </div>
                         <div className="bg-gray-50 p-5 sm:p-8">
-                          <a
-                            href="#"
+                          <Link
+                            href="/services/web"
                             className="-m-3 flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100"
                           >
                             <span className="flex items-center">
@@ -135,7 +135,7 @@ export default function Navbar() {
                               sites/applications Web/Mobile vous permettra de
                               conquérir le monde du digital !
                             </span>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </Popover.Panel>

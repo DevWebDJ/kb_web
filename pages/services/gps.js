@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Layout from "../../components/Layout";
+import Lottie from "lottie-react";
+import gps from "../../public/assets/gps.json";
 
 const Gps = () => {
   return (
@@ -46,7 +48,7 @@ const Gps = () => {
                   </div>
                   <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                     <div className="mt-4 flex flex-col lg:flex-row justify-center items-center">
-                      <MapPinIcon className="h-20 w-auto text-primaryBlue" />
+                      <Lottie loop animationData={gps} className=" " />
                       <ul role="list">
                         <li>
                           Localiser exactement vos véhicules en cas de vol.

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Lottie from "lottie-react";
+import arrow from "../public/assets/cta_arrow.json";
 
 const Hero = () => {
   return (
@@ -74,12 +76,11 @@ const Hero = () => {
               Demander un Devis
             </button>
           </div>
-          <Image
-            src="/assets/CTA_arrow.gif"
-            height={170}
-            width={104}
-            className=" -rotate-8 float-right  pt-1"
-            alt="CTA Arrow GIF"
+
+          <Lottie
+            loop
+            animationData={arrow}
+            className="-rotate-8 float-right  pt-1   w-1/4"
           />
         </div>
       </div>

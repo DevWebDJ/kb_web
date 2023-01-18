@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Layout from "../../components/Layout";
-import { BiCctv } from "react-icons/bi";
+import Lottie from "lottie-react";
+import cctv from "../../public/assets/cctv.json";
 
 const Camera = () => {
   return (
@@ -46,7 +47,7 @@ const Camera = () => {
                   </div>
                   <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                     <div className="mt-4 flex flex-col lg:flex-row justify-center items-center lg:gap-10">
-                      <BiCctv className="h-20 w-auto text-black" />
+                    <Lottie loop animationData={cctv} className=" " />
                       <ul role="list" className="w-1/2 text-justify">
                         <li>
                           Nous mettons en place un système de télésurveillance
