@@ -14,14 +14,14 @@ const Camera = () => {
             src={"/assets/udots_bottom.svg"}
             width={243}
             height={174}
-            className="h-1/5 w-auto absolute left-0 hidden lg:block translate-y-1/2"
+            className="h-48 md:h-24 w-auto absolute left-0 hidden lg:block translate-y-1/2"
             alt="Bottom Dots"
           />
           <Image
             src={"/assets/udots_bottom.svg"}
             width={243}
             height={174}
-            className="h-1/5 w-auto absolute right-0 hidden lg:block translate-y-3/4"
+            className="h-48 md:h-24 w-auto absolute right-0 hidden lg:block translate-y-3/4"
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">

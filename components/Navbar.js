@@ -1,18 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  PhoneIcon,
-  ShieldCheckIcon,
-  XMarkIcon,
-  GlobeAltIcon,
-  MapPinIcon,
-  VideoCameraIcon,
-  ServerStackIcon,
-  WrenchScrewdriverIcon,
-  FingerPrintIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { services } from "../data/constant";
@@ -36,7 +25,7 @@ export default function Navbar() {
                 alt="Logo KB"
               />
             </Link>
-            <h1 className="text-[#1257A3] font-semibold lg:text-xl text-base">
+            <h1 className="text-[#1257A3] font-semibold lg:text-base text-sm">
               Développement
             </h1>
           </div>
@@ -50,12 +39,12 @@ export default function Navbar() {
             as="nav"
             className="hidden space-x-10 md:flex md:items-center"
           >
-            <a
-              href="#"
+            <Link
+              href="/software"
               className="text-base font-medium text-gray-500 hover:text-primaryBlue"
             >
-              Produits
-            </a>
+              Nos Logiciels
+            </Link>
 
             <Popover className="relative">
               {({ open }) => (

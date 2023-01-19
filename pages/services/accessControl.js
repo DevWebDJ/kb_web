@@ -14,14 +14,14 @@ const Camera = () => {
             src={"/assets/udots_bottom.svg"}
             width={243}
             height={174}
-            className="h-1/5 w-auto absolute left-0 hidden lg:block translate-y-1/2"
+            className="h-48 md:h-24 w-auto absolute left-0 hidden lg:block translate-y-1/2"
             alt="Bottom Dots"
           />
           <Image
             src={"/assets/udots_bottom.svg"}
             width={243}
             height={174}
-            className="h-1/5 w-auto absolute right-0 hidden lg:block translate-y-3/4"
+            className="h-48 md:h-24 w-auto absolute right-0 hidden lg:block translate-y-3/4"
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
@@ -40,7 +40,7 @@ const Camera = () => {
                 <div className="mt-8 lg:mt-0">
                   <div className="mx-auto max-w-prose text-base lg:max-w-none text-center">
                     <p className="text-lg text-gray-500 lg:w-1/2 text-center mx-auto">
-                      Vous cherchez un système de pointage/contrôle d'accès
+                      Vous cherchez un système de pointage/contrôle d&apos;accès
                       adapté à votre entreprise ou organisation (hôtel,
                       promotion immobilière, banque, etc.) ? Nous avons ce
                       qu&apos;il vous faut !
@@ -48,22 +48,26 @@ const Camera = () => {
                   </div>
                   <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
                     <div className="mt-4 flex flex-col lg:flex-row justify-center items-center lg:gap-10">
-                      <Lottie loop animationData={access} className=" lg:h-72 lg:translate-y-8 translate-y-5 w-auto" />
+                      <Lottie
+                        loop
+                        animationData={access}
+                        className=" lg:h-72 lg:translate-y-8 translate-y-5 w-auto"
+                      />
                       <p className="lg:w-1/2">
                         Nos systèmes de pointage de marques performants vous
-                        permettent de calculer et d'optimiser les temps de
-                        présence et d'absence de vos salariés et agents, et de
-                        restreindre l'accès à certaines zones via des digicodes,
-                        lecteurs de badges et serrures électriques.
+                        permettent de calculer et d&apos;optimiser les temps de
+                        présence et d&apos;absence de vos salariés et agents, et
+                        de restreindre l&apos;accès à certaines zones via des
+                        digicodes, lecteurs de badges et serrures électriques.
                       </p>
                     </div>
                     <div className="mx-auto w-4/5 text-center">
                       <p>
                         Notre équipe est à votre disposition pour vous proposer
-                        une solution adaptée à vos besoins. N'hésitez pas à nous
-                        contacter pour en savoir plus sur nos systèmes de
-                        pointage/contrôle d'accès et sur les services que nous
-                        proposons.
+                        une solution adaptée à vos besoins. N&apos;hésitez pas à
+                        nous contacter pour en savoir plus sur nos systèmes de
+                        pointage/contrôle d&apos;accès et sur les services que
+                        nous proposons.
                       </p>
                       <p>
                         Nous serons heureux de répondre à vos questions et de

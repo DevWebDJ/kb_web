@@ -90,7 +90,7 @@ const Web = () => {
             src={"/assets/udots_bottom.svg"}
             width={243}
             height={174}
-            className="h-1/5 w-auto absolute bottom-0 right-0 hidden lg:block -translate-y-5"
+            className="h-70 md:h-24 w-auto absolute bottom-0 right-0 hidden lg:block -translate-y-5"
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
