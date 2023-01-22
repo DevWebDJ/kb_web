@@ -47,8 +47,8 @@ const HeroTwo = () => {
           </div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ y: -50 }}
-            transition={{ ease: "easeOut", duration: 2 }}
+            animate={{ y: -10 }}
+            transition={{ ease: "easeOut", duration: 1 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="flex items-center justify-center"
