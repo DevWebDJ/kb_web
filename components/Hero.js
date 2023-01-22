@@ -6,7 +6,7 @@ import arrow from "../public/assets/cta_arrow.json";
 
 const Hero = () => {
   return (
-    <div className="lg:py-10 flex flex-col lg:flex-row-reverse lg:gap-32">
+    <div className="lg:py-10 flex flex-col lg:flex-row-reverse lg:gap-32 bg-primaryBlue/5">
       <div className="relative flex justify-between flex-row lg:flex-row-reverse lg:gap-32 items-center lg:py-24 py-5">
         <Image
           src={"/assets/udots.svg"}
@@ -73,7 +73,7 @@ const Hero = () => {
               type="button"
               className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-PBD focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 animate-bounce hover:animate-none"
             >
-              Demander un Devis
+              <Link href={"/devis"}>Demander un Devis</Link>
             </button>
           </div>
 

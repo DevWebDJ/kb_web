@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import React from "react";
 
 const Clients = () => {
@@ -14,8 +14,8 @@ const Clients = () => {
             <p className="mt-3 max-w-3xl text-lg text-gray-500 pb-5">
               Nous remplissons les objectifs que nos clients nous ont fixés avec
               la même exigence, et nous veillons à les satisfaire et a créer une
-              relation de confiance pour travailler avec chacun d&apos;eux sur le
-              long terme
+              relation de confiance pour travailler avec chacun d&apos;eux sur
+              le long terme
             </p>
             <div className="max-w-fit">
               <div className="flex gap-4">
@@ -23,13 +23,13 @@ const Clients = () => {
                   type="button"
                   className="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-9 py-2 text-sm font-medium leading-4 text-PBD hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2"
                 >
-                  Nos Produits
+                  Nos logiciels
                 </button>
                 <button
                   type="button"
                   className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
                 >
-                  Demander un Devis
+                  <Link href={"/devis"}>Demander un Devis</Link>
                 </button>
               </div>
             </div>

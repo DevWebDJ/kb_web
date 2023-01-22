@@ -78,7 +78,7 @@ const Camera = () => {
                         type="button"
                         className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
                       >
-                        Demander un Devis
+                        <Link href={"/devis"}>Demander un Devis</Link>
                       </button>
                     </div>
                   </div>

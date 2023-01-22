@@ -207,8 +207,8 @@ const Web = () => {
                   </ul>
                 </div>
 
-                <a
-                  href="#"
+                <Link
+                  href={"/devis"}
                   className={classNames(
                     tier.mostPopular
                       ? "bg-primaryBlue text-white hover:bg-PBD"
@@ -217,7 +217,7 @@ const Web = () => {
                   )}
                 >
                   {tier.cta}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

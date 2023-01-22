@@ -43,7 +43,7 @@ const Camera = () => {
               <div className="mt-8 lg:grid lg:grid-cols-1 lg:gap-8 place-content-center justify-items-center">
                 <div className="mt-8 lg:mt-0">
                   <div className="mx-auto max-w-prose text-base lg:max-w-none text-center">
-                    <p className="text-lg text-gray-500 lg:w-1/2 text-center mx-auto">
+                    <p className="text-lg text-gray-500 lg:w-3/4 text-center mx-auto">
                       KB Développement vous accompagne à chaque étape
                       d&apos;installation de votre réseau informatique en vous
                       proposant des solutions en fonction de vos besoins et de
@@ -111,11 +111,11 @@ const Camera = () => {
                       </p>
                     </div>
                     <div className="mx-auto w-4/5 text-center">
-                      <button
+                    <button
                         type="button"
                         className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
                       >
-                        Demander un Devis
+                        <Link href={"/devis"}>Demander un Devis</Link>
                       </button>
                     </div>
                   </div>

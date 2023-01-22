@@ -133,20 +133,20 @@ export default function Navbar() {
               )}
             </Popover>
 
-            <a
-              href="#"
+            <Link
+              href="/about"
               className="text-base font-medium text-gray-500 hover:text-primaryBlue"
             >
               Qui sommes-nous ?
-            </a>
+            </Link>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a
-              href="#"
+            <Link
+              href="/devis"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-PBD"
             >
               Demander un Devis
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -218,12 +218,12 @@ export default function Navbar() {
                 </a>
               </div>
               <div>
-                <a
-                  href="#"
+                <Link
+                  href={"/devis"}
                   className="flex w-full items-center justify-center rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primaryBlue"
                 >
                   Demander un Devis
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Lottie from "lottie-react";
 import Teamwork from "/public/assets/teamwork.json";
+import { motion } from "framer-motion";
 
 const HeroTwo = () => {
   return (
@@ -44,13 +45,20 @@ const HeroTwo = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ y: -50 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center"
+          >
             <Lottie
               loop
               animationData={Teamwork}
               className="lg:w-full w-1/2 "
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
