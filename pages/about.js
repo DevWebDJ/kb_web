@@ -175,7 +175,7 @@ const About = () => {
               {/* Content area */}
               <div className="pt-12 sm:pt-16 lg:pt-20">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Plus qu'une entreprise
+                  Plus qu&apos;une entreprise
                 </h2>
                 <div className="mt-6 space-y-6 text-gray-500">
                   <p className="text-lg">
