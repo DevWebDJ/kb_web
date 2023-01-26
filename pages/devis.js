@@ -1,8 +1,25 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import Layout from "../components/Layout";
 import { services } from "../data/constant";
+import { Listbox, Transition } from "@headlessui/react";
+import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import Lottie from "lottie-react";
+import waving from "../public/assets/waving.json";
 
+const sector = [
+  { id: 0, name: `Selectionnez votre secteur d'activité` },
+  { id: 1, name: "Banque/Assurance/Finance" },
+  { id: 2, name: "Construction BTP" },
+  { id: 3, name: "Distribution / Commerce" },
+  { id: 4, name: "Immobilier" },
+  { id: 5, name: "Énergie, Mines, Matière première" },
+  { id: 6, name: "Industries" },
+  { id: 7, name: "Informatique/Télécom/Internet" },
+  { id: 8, name: "service publics/Administrations" },
+  { id: 9, name: "Services" },
+  { id: 10, name: "Autre" },
+];
 const offices = [
   {
     id: 1,
@@ -11,7 +28,12 @@ const offices = [
   },
 ];
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
 const Devis = () => {
+  const [selected, setSelected] = useState(sector[0]);
   return (
     <>
       <Layout>
@@ -24,7 +46,7 @@ const Devis = () => {
                   <h1 className="text-4xl font-bold tracking-tight text-primaryBlue sm:text-5xl lg:text-6xl">
                     Demander un devis
                   </h1>
-                  <p className="mt-6 max-w-3xl text-xl text-warm-gray-500 lg:text-justify">
+                  <p className="mt-6 max-w-3xl text-xl text-gray-500 lg:text-justify">
                     N&apos;attendez plus ! Remplissez notre formulaire de
                     demande de devis dès maintenant et obtenez l&apos;estimation
                     de coûts pour les produits ou services qui vous intéressent.
@@ -35,14 +57,18 @@ const Devis = () => {
                 </div>
               </div>
             </div>
-
             {/* Contact section */}
             <section
               className="relative bg-white"
               aria-labelledby="contact-heading"
             >
+              <Lottie
+                animationData={waving}
+                count={4}
+                className="absolute top-0 h-48 w-auto right-1/4 -translate-y-48"
+              />
               <div
-                className="absolute h-1/2 w-full bg-warm-gray-50"
+                className="absolute h-1/2 w-full bg-gray-50"
                 aria-hidden="true"
               />
               {/* Decorative dot pattern */}
@@ -211,14 +237,15 @@ const Devis = () => {
                       </p>
                       <dl className="mt-8 space-y-6">
                         <dt>
-                          <span className="sr-only">Phone number</span>
+                          <span className="sr-only">Contactez-nous</span>
                         </dt>
                         <dd className="flex text-base text-blue-50">
                           <PhoneIcon
                             className="h-6 w-6 flex-shrink-0 text-blue-200"
                             aria-hidden="true"
                           />
-                          <span className="ml-3">+1 (555) 123-4567</span>
+                          <span className="ml-3">0770 76 06 05</span>
+                          <span className="ml-3">0770 76 06 12</span>
                         </dd>
                         <dt>
                           <span className="sr-only">Email</span>
@@ -228,7 +255,7 @@ const Devis = () => {
                             className="h-6 w-6 flex-shrink-0 text-blue-200"
                             aria-hidden="true"
                           />
-                          <span className="ml-3">support@workcation.com</span>
+                          <span className="ml-3">contact@kbdev.co</span>
                         </dd>
                       </dl>
                       <ul role="list" className="mt-8 flex space-x-12">
@@ -257,7 +284,7 @@ const Devis = () => {
                             className="text-blue-200 hover:text-blue-100"
                             href="#"
                           >
-                            <span className="sr-only">GitHub</span>
+                            <span className="sr-only">Instagram</span>
                             <svg
                               className="h-7 w-7"
                               aria-hidden="true"
@@ -293,7 +320,7 @@ const Devis = () => {
 
                     {/* Contact form */}
                     <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                      <h3 className="text-lg font-medium text-warm-gray-900">
+                      <h3 className="text-lg font-medium text-gray-900">
                         Send us a message
                       </h3>
                       <form
@@ -304,7 +331,7 @@ const Devis = () => {
                         <div>
                           <label
                             htmlFor="full-name"
-                            className="block text-sm font-medium text-warm-gray-900"
+                            className="block text-sm font-medium text-gray-900"
                           >
                             Nom & Prénom *
                           </label>
@@ -314,7 +341,7 @@ const Devis = () => {
                               name="full-name"
                               id="full-name"
                               autoComplete="name"
-                              className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                               required
                             />
                           </div>
@@ -322,7 +349,7 @@ const Devis = () => {
                         <div>
                           <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-warm-gray-900"
+                            className="block text-sm font-medium text-gray-900"
                           >
                             Adresse Mail *
                           </label>
@@ -332,7 +359,7 @@ const Devis = () => {
                               name="email"
                               type="email"
                               autoComplete="email"
-                              className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                             />
                           </div>
                         </div>
@@ -340,7 +367,7 @@ const Devis = () => {
                           <div className="flex justify-between">
                             <label
                               htmlFor="phone"
-                              className="block text-sm font-medium text-warm-gray-900"
+                              className="block text-sm font-medium text-gray-900"
                             >
                               Numéro de Téléphone *
                             </label>
@@ -351,22 +378,44 @@ const Devis = () => {
                               name="phone"
                               id="phone"
                               autoComplete="tel"
-                              className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                               aria-describedby="phone-optional"
                             />
                           </div>
                         </div>
-                        <fieldset className="gap-4 grid grid-rows-4 grid-flow-col">
+                        <fieldset className="gap-4 grid lg:grid-rows-5 grid-rows-8 grid-flow-row lg:grid-flow-col">
+                          <div className="relative flex items-start">
+                            <div className="flex h-5 items-center">
+                              <input
+                                id="logiciels"
+                                aria-describedby="comments-description"
+                                name="logiciels"
+                                type="checkbox"
+                                className="h-4 w-4 rounded border-gray-300 text-PBD focus:ring-primaryBlue"
+                              />
+                            </div>
+                            <div className="ml-3 text-sm">
+                              <label
+                                htmlFor="logiciels"
+                                className="font-medium text-gray-700"
+                              >
+                                Logiciels de gestion
+                              </label>
+                            </div>
+                          </div>
                           {services.map((item, id) => {
                             return (
-                              <div className="relative flex items-start" key={id}>
+                              <div
+                                className="relative flex items-start"
+                                key={id}
+                              >
                                 <div className="flex h-5 items-center">
                                   <input
                                     id={item.name}
                                     aria-describedby="comments-description"
                                     name={item.name}
                                     type="checkbox"
-                                    className="h-4 w-4 rounded border-gray-300 text-PBD focus:ring-indigo-500"
+                                    className="h-4 w-4 rounded border-gray-300 text-PBD focus:ring-primaryBlue"
                                   />
                                 </div>
                                 <div className="ml-3 text-sm">
@@ -378,38 +427,107 @@ const Devis = () => {
                                   </label>
                                 </div>
                               </div>
-                            )
+                            );
                           })}
                         </fieldset>
                         <div className="sm:col-span-2">
                           <label
-                            htmlFor="subject"
-                            className="block text-sm font-medium text-warm-gray-900"
+                            htmlFor="sector"
+                            className="block text-sm font-medium text-gray-900"
                           >
-                            Subject
+                            Secteur d'activité
                           </label>
                           <div className="mt-1">
-                            <input
-                              type="text"
-                              name="subject"
-                              id="subject"
-                              className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                            />
+                            <Listbox value={selected} onChange={setSelected}>
+                              {({ open }) => (
+                                <>
+                                  <div className="relative mt-1">
+                                    <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm">
+                                      <span className="block truncate">
+                                        {selected.name}
+                                      </span>
+                                      <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                                        <ChevronUpDownIcon
+                                          className="h-5 w-5 text-gray-400"
+                                          aria-hidden="true"
+                                        />
+                                      </span>
+                                    </Listbox.Button>
+
+                                    <Transition
+                                      show={open}
+                                      as={Fragment}
+                                      leave="transition ease-in duration-100"
+                                      leaveFrom="opacity-100"
+                                      leaveTo="opacity-0"
+                                    >
+                                      <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                        {sector.map((person) => (
+                                          <Listbox.Option
+                                            key={person.id}
+                                            className={({ active }) =>
+                                              classNames(
+                                                active
+                                                  ? "text-white bg-blue-600"
+                                                  : "text-gray-900",
+                                                "relative cursor-default select-none py-2 pl-8 pr-4"
+                                              )
+                                            }
+                                            value={person}
+                                          >
+                                            {({ selected, active }) => (
+                                              <>
+                                                <span
+                                                  className={classNames(
+                                                    selected
+                                                      ? "font-semibold"
+                                                      : "font-normal",
+                                                    "block truncate"
+                                                  )}
+                                                >
+                                                  {person.name}
+                                                </span>
+
+                                                {selected ? (
+                                                  <span
+                                                    className={classNames(
+                                                      active
+                                                        ? "text-white"
+                                                        : "text-blue-600",
+                                                      "absolute inset-y-0 left-0 flex items-center pl-1.5"
+                                                    )}
+                                                  >
+                                                    <CheckIcon
+                                                      className="h-5 w-5"
+                                                      aria-hidden="true"
+                                                    />
+                                                  </span>
+                                                ) : null}
+                                              </>
+                                            )}
+                                          </Listbox.Option>
+                                        ))}
+                                      </Listbox.Options>
+                                    </Transition>
+                                  </div>
+                                </>
+                              )}
+                            </Listbox>
                           </div>
                         </div>
                         <div className="sm:col-span-2">
                           <div className="flex justify-between">
                             <label
                               htmlFor="message"
-                              className="block text-sm font-medium text-warm-gray-900"
+                              className="block text-sm font-medium text-gray-900"
                             >
-                              Message
+                              Exprimez votre besoin en détail
                             </label>
                             <span
                               id="message-max"
-                              className="text-sm text-warm-gray-500"
+                              className="text-sm text-gray-500"
                             >
-                              Max. 500 characters
+                              Max. 1500 caractère
                             </span>
                           </div>
                           <div className="mt-1">
@@ -417,7 +535,8 @@ const Devis = () => {
                               id="message"
                               name="message"
                               rows={4}
-                              className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              maxLength={1500}
+                              className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-primaryBlue focus:ring-blue-500"
                               aria-describedby="message-max"
                               defaultValue={""}
                             />
@@ -443,11 +562,11 @@ const Devis = () => {
               <div className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
                 <h2
                   id="offices-heading"
-                  className="text-3xl font-bold tracking-tight text-warm-gray-900"
+                  className="text-3xl font-bold tracking-tight text-gray-900"
                 >
                   Our offices
                 </h2>
-                <p className="mt-6 max-w-3xl text-lg text-warm-gray-500">
+                <p className="mt-6 max-w-3xl text-lg text-gray-500">
                   Varius facilisi mauris sed sit. Non sed et duis dui leo,
                   vulputate id malesuada non. Cras aliquet purus dui laoreet
                   diam sed lacus, fames.
@@ -455,10 +574,10 @@ const Devis = () => {
                 <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
                   {offices.map((office) => (
                     <div key={office.id}>
-                      <h3 className="text-lg font-medium text-warm-gray-900">
+                      <h3 className="text-lg font-medium text-gray-900">
                         {office.city}
                       </h3>
-                      <p className="mt-2 text-base text-warm-gray-500">
+                      <p className="mt-2 text-base text-gray-500">
                         {office.address.map((line) => (
                           <span key={line} className="block">
                             {line}
