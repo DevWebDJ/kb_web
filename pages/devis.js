@@ -9,16 +9,19 @@ import waving from "../public/assets/waving.json";
 
 const sector = [
   { id: 0, name: `Selectionnez votre secteur d'activité` },
-  { id: 1, name: "Banque/Assurance/Finance" },
+  { id: 1, name: "Clinique / Cabinet Médical" },
   { id: 2, name: "Construction BTP" },
-  { id: 3, name: "Distribution / Commerce" },
+  { id: 3, name: "Commerce / Distribution" },
   { id: 4, name: "Immobilier" },
   { id: 5, name: "Énergie, Mines, Matière première" },
   { id: 6, name: "Industries" },
-  { id: 7, name: "Informatique/Télécom/Internet" },
-  { id: 8, name: "service publics/Administrations" },
-  { id: 9, name: "Services" },
-  { id: 10, name: "Autre" },
+  { id: 7, name: "Informatique/Télécom" },
+  { id: 8, name: "Service publics / Administrations" },
+  { id: 9, name: "Services & Prestations" },
+  { id: 10, name: "Fonction Libérale" },
+  { id: 11, name: "Agroalimentaire" },
+  { id: 12, name: "Hôtellerie & Restauration " },
+  { id: 13, name: "Autre" },
 ];
 const offices = [
   {
@@ -320,8 +323,8 @@ const Devis = () => {
 
                     {/* Contact form */}
                     <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                      <h3 className="text-lg font-medium text-gray-900">
-                        Send us a message
+                      <h3 className="text-lg font-black uppercase text-gray-900">
+                        KB Développement
                       </h3>
                       <form
                         action="#"
@@ -360,6 +363,7 @@ const Devis = () => {
                               type="email"
                               autoComplete="email"
                               className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                              required
                             />
                           </div>
                         </div>
@@ -379,11 +383,15 @@ const Devis = () => {
                               id="phone"
                               autoComplete="tel"
                               className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-                              aria-describedby="phone-optional"
+                              aria-describedby="phone"
+                              required
                             />
                           </div>
                         </div>
-                        <fieldset className="gap-4 grid lg:grid-rows-5 grid-rows-8 grid-flow-row lg:grid-flow-col">
+                        <fieldset
+                          required
+                          className="gap-4 grid lg:grid-rows-5 grid-rows-8 grid-flow-row lg:grid-flow-col"
+                        >
                           <div className="relative flex items-start">
                             <div className="flex h-5 items-center">
                               <input
@@ -435,7 +443,7 @@ const Devis = () => {
                             htmlFor="sector"
                             className="block text-sm font-medium text-gray-900"
                           >
-                            Secteur d'activité
+                            Secteur d&apos;activité
                           </label>
                           <div className="mt-1">
                             <Listbox value={selected} onChange={setSelected}>

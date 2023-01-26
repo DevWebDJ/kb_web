@@ -41,9 +41,8 @@ const Hero = () => {
           <h1 className=" text-xs md:text-sm text-primaryBlue uppercase font-medium">
             éditeur de solutions de Gestion et prestation informatique
           </h1>
-          <h1 className=" text-3xl font-semibold leading-9">
-            Notre équipe de professionnels met son savoir-faire à votre
-            disposition
+          <h1 className=" text-2xl md:text-3xl lg:text-5xl font-bold leading-9">
+            Notre équipe met son savoir-faire à votre disposition
           </h1>
         </div>
         <p className="text-gray-500 text-center lg:text-left">

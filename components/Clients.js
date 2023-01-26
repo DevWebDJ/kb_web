@@ -1,16 +1,33 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import {
+  animate,
+  motion,
+  useMotionValue,
+  useTransform,
+  useInView,
+} from "framer-motion";
 
 const Clients = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const numbers = useMotionValue(1);
+  const roundedYear = useTransform(numbers, (latest) => Math.round(latest));
+  useEffect(() => {
+    const animation = animate(numbers, 1000, { duration: 6 });
+  }, []);
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">
-              plus de <span className="font-black text-primaryBlue">1000</span>{" "}
+            <motion.h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase">
+              plus de{" "}
+              <motion.span ref={ref} className="font-black text-primaryBlue">
+                {roundedYear}
+              </motion.span>{" "}
               clients nous font confiance
-            </h2>
+            </motion.h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-500 pb-5">
               Nous remplissons les objectifs que nos clients nous ont fixés avec
               la même exigence, et nous veillons à les satisfaire et a créer une

@@ -27,7 +27,7 @@ export default function Home() {
             <Hero />
           </div>
           <HeroTwo />
-          <div className="">
+          <div className="bg-primaryBlue/5">
             <Image
               src={"/assets/lineDots.svg"}
               height={90}
