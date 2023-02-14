@@ -76,11 +76,13 @@ const Gps = () => {
                         sur notre système de géolocalisation et sur les services
                         que nous proposons.
                       </p>
-                      <button
-                        type="button"
-                        className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
-                      >
-                        <Link href={"/devis"}>Demander un Devis</Link>
+                      <button>
+                        <Link
+                          href="/devis"
+                          className="no-underline inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-PBD"
+                        >
+                          Demander un Devis
+                        </Link>
                       </button>
                     </div>
                   </div>

@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         heroimg: "url('/assets/hero.jpg')",
+        vid: "url('/assets/vidBG.jpg')",
       },
       colors: {
         primaryBlue: "#0D80FD",

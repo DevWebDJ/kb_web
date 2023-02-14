@@ -8,6 +8,7 @@ import HeroTwo from "../components/HeroTwo";
 import Cards from "../components/Cards";
 import Clients from "../components/Clients";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import Video from "../components/Video";
 
 // const inter = Inter({ subsets: ['latin'] })
 const outfit = Outfit({ subsets: ["latin"] });
@@ -27,6 +28,7 @@ export default function Home() {
             <Hero />
           </div>
           <HeroTwo />
+          <Video />
           <div className="bg-primaryBlue/5">
             <Image
               src={"/assets/lineDots.svg"}
