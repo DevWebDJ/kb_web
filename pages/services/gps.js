@@ -25,13 +25,13 @@ const Gps = () => {
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
-            <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl lg:py-16 px-4  md:px-6 lg:px-8">
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-1 lg:gap-8 place-content-center justify-items-center">
                 <div>
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue  md:text-4xl uppercase">
                     Système de géolocalisation (GPS)
                   </h3>
                 </div>

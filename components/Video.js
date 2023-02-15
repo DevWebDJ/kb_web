@@ -1,15 +1,41 @@
 import React from "react";
 
 const Video = () => {
+  const textChanging = (e) => {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    let iterations = 0;
+    const interval = setInterval(() => {
+      e.target.innerText = e.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iterations) {
+            return e.target.dataset.value[index];
+          } else {
+            return letters[Math.floor(Math.random() * 26)];
+          }
+        })
+        .join("");
+      if (iterations >= e.target.dataset.value.length) clearInterval(interval);
+      iterations += 1 / 2;
+    }, 30);
+  };
+
   return (
-    <div className="flex items-center justify-center flex-col bg-vid h-screen py-10">
-      <h1 className=" text-6xl font-bold pb-8">
-        Voyez par vous-même nos services en action
-      </h1>
+    <div className="flex items-center lg:justify-center  flex-col bg-vid lg:h-[1125px] py-10">
+      <div className="w-full flex items-center justify-center h-48">
+        <h1
+          className=" text-2xl md:text-4xl lg:text-7xl font-black  lg:pt-10 pt-20  lg:w-1/2  text-center break-words uppercase text-black"
+          onMouseOver={textChanging}
+          data-value="Voyez par vous-même nos services en action"
+        >
+          Voyez par vous-même nos services en action
+        </h1>
+      </div>
       <iframe
-        className=" shadow-md w-full lg:w-1/2 lg:h-full px-2 h-96"
-        width="1180"
-        height="664"
+        className=" shadow-md lg:w-3/4 w-full lg:h-3/5 px-2 h-96 lg:translate-y-12"
+        width="1920"
+        height="1080"
         src="https://www.youtube.com/embed/7I8O2E5BHDo?rel=0&color=white"
         title="KB Développement | tout sous un même toît"
         frameborder="0"

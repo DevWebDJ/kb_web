@@ -82,12 +82,12 @@ const About = () => {
           </motion.h1>
         </motion.div>
 
-        <div className="relative bg-white py-16 sm:py-24">
+        <div className="relative bg-white py-16  py-24">
           <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-            <div className="relative sm:py-16 lg:py-0">
+            <div className="relative  py-16 lg:py-0">
               <div
                 aria-hidden="true"
-                className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
+                className="hidden  block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
               >
                 <div className="absolute inset-y-0 right-1/2 w-full rounded-r-3xl bg-gray-50 lg:right-72" />
                 <svg
@@ -123,7 +123,7 @@ const About = () => {
                   />
                 </svg>
               </div>
-              <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+              <div className="relative mx-auto max-w-md px-4  max-w-3xl  px-6 lg:max-w-none lg:px-0 lg:py-20">
                 {/* Testimonial card*/}
                 <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
                   <Image
@@ -171,10 +171,10 @@ const About = () => {
               </div>
             </div>
 
-            <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+            <div className="relative mx-auto max-w-md px-4  max-w-3xl  px-6 lg:px-0">
               {/* Content area */}
-              <div className="pt-12 sm:pt-16 lg:pt-20">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <div className="pt-12  pt-16 lg:pt-20">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900  text-4xl">
                   Plus qu&apos;une entreprise
                 </h2>
                 <div className="mt-6 space-y-6 text-gray-500">

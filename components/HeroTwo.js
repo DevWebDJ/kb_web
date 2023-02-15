@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroTwo = () => {
   return (
-    <div className="relative overflow-hidden bg-white pt-16 pb-32">
+    <div className="relative overflow-hidden bg-white">
       <Image
         src={"/assets/dots.svg"}
         width={200}
@@ -16,13 +16,13 @@ const HeroTwo = () => {
       />
       <div className="mt-24">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-          <div className="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
+          <div className="mx-auto max-w-xl px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
             <div>
               <Image
                 src={"/assets/zigzag.svg"}
                 height={29}
                 width={394}
-                className=" rotate-90 w-5 absolute top-0 right-1/3 -scale-x-100"
+                className=" rotate-90 w-5 absolute top-0 right-0 -scale-x-100"
                 alt="Zigzag"
               />
               <div className="mt-6">
@@ -56,7 +56,7 @@ const HeroTwo = () => {
             <Lottie
               loop
               animationData={Teamwork}
-              className="lg:w-full w-1/2 "
+              className="lg:w-full w-full md:w-3/4 "
             />
           </motion.div>
         </div>

@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 import Lottie from "lottie-react";
 import access from "../../public/assets/access.json";
 
-const Camera = () => {
+const Access = () => {
   return (
     <>
       <Layout>
@@ -25,13 +25,13 @@ const Camera = () => {
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
-            <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl lg:py-16 px-4  md:px-6 lg:px-8">
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-1 lg:gap-8 place-content-center justify-items-center">
                 <div>
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue  md:text-4xl uppercase">
                     Installation de système de contrôle d&apos;accès & pointeuse
                   </h3>
                 </div>
@@ -39,7 +39,7 @@ const Camera = () => {
               <div className="mt-8 lg:grid lg:grid-cols-1 lg:gap-8 place-content-center justify-items-center">
                 <div className="mt-8 lg:mt-0">
                   <div className="mx-auto max-w-prose text-base lg:max-w-none text-center">
-                    <p className="text-lg text-gray-500 lg:w-1/2 text-center mx-auto">
+                    <p className="md:text-lg   text-gray-500 lg:w-3/4 text-center mx-auto">
                       Vous cherchez un système de pointage/contrôle d&apos;accès
                       adapté à votre entreprise ou organisation (hôtel,
                       promotion immobilière, banque, etc.) ? Nous avons ce
@@ -51,9 +51,9 @@ const Camera = () => {
                       <Lottie
                         loop
                         animationData={access}
-                        className=" lg:h-72 lg:translate-y-8 translate-y-5 w-auto"
+                        className=" lg:h-72 md:h-64 lg:translate-y-8 translate-y-5 w-auto"
                       />
-                      <p className="lg:w-1/2">
+                      <p className="lg:w-1/2 text-center lg:text-justify">
                         Nos systèmes de pointage de marques performants vous
                         permettent de calculer et d&apos;optimiser les temps de
                         présence et d&apos;absence de vos salariés et agents, et
@@ -62,23 +62,25 @@ const Camera = () => {
                       </p>
                     </div>
                     <div className="mx-auto w-4/5 text-center">
-                      <p>
+                      <p className="text-center lg:text-justify">
                         Notre équipe est à votre disposition pour vous proposer
                         une solution adaptée à vos besoins. N&apos;hésitez pas à
                         nous contacter pour en savoir plus sur nos systèmes de
                         pointage/contrôle d&apos;accès et sur les services que
                         nous proposons.
                       </p>
-                      <p>
+                      <p className="text-center lg:text-justify">
                         Nous serons heureux de répondre à vos questions et de
                         vous aider à trouver la solution qui convient le mieux à
                         votre entreprise ou organisation.
                       </p>
-                      <button
-                        type="button"
-                        className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
-                      >
-                        <Link href={"/devis"}>Demander un Devis</Link>
+                      <button>
+                        <Link
+                          href="/devis"
+                          className="no-underline inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-PBD"
+                        >
+                          Demander un Devis
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -92,4 +94,4 @@ const Camera = () => {
   );
 };
 
-export default Camera;
+export default Access;

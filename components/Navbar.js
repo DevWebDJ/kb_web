@@ -14,13 +14,13 @@ function classNames(...classes) {
 export default function Navbar() {
   return (
     <Popover className="relative bg-white z-50">
-      <div className="mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+      <div className="mx-auto px-6">
+        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-10">
           <div className="flex justify-start items-center gap-3 lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">Développement</span>
               <img
-                className="h-10 w-auto sm:h-12 md:h-10"
+                className="h-10 w-auto  h-12 lg:h-10"
                 src="/logo_small.svg"
                 alt="Logo KB"
               />
@@ -29,7 +29,7 @@ export default function Navbar() {
               Développement
             </h1>
           </div>
-          <div className="-my-2 -mr-2 md:hidden">
+          <div className="-my-2 -mr-2 lg:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none ">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -37,7 +37,7 @@ export default function Navbar() {
           </div>
           <Popover.Group
             as="nav"
-            className="hidden space-x-10 md:flex md:items-center"
+            className="hidden space-x-10 lg:flex lg:items-center"
           >
             <Link
               href="/software"
@@ -74,16 +74,16 @@ export default function Navbar() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0 lg:max-w-3xl">
+                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-0 lg:max-w-3xl">
                       <div className="overflow-hidden rounded-lg shadow-lg ">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                        <div className="relative grid gap-6 bg-white px-5 py-6  gap-8  p-8 lg:grid-cols-2">
                           {services.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
                               className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50"
                             >
-                              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primaryBlue text-white sm:h-12 sm:w-12">
+                              <div className="flex flex-shrink-0 items-center justify-center rounded-full bg-primaryBlue text-white  h-12  w-12">
                                 <item.icon
                                   className="h-6 w-6"
                                   aria-hidden="true"
@@ -100,10 +100,11 @@ export default function Navbar() {
                             </a>
                           ))}
                         </div>
-                        <div className="bg-gray-50 p-5 sm:p-8">
+                        <div className="bg-gray-50 p-8">
                           <Link
                             href="/services/web"
                             className="-m-3 flow-root rounded-md p-3 transition duration-150 ease-in-out hover:bg-gray-100"
+                            passHref
                           >
                             <span className="flex items-center">
                               <span className="text-base font-medium text-gray-900 flex">
@@ -140,7 +141,7 @@ export default function Navbar() {
               Qui sommes-nous ?
             </Link>
           </Popover.Group>
-          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+          <div className="hidden items-center justify-end lg:flex lg:flex-1 lg:w-0">
             <Link
               href="/devis"
               className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-PBD"
@@ -162,7 +163,7 @@ export default function Navbar() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden"
         >
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg">
             <div className="px-5 pt-5 pb-6">

@@ -12,7 +12,7 @@ const Hero = () => {
           src={"/assets/udots.svg"}
           width={243}
           height={174}
-          className="lg:absolute lg:left-[50%] lg:top-2 lg:-z-10 w-1/3 lg:w-auto"
+          className="lg:absolute lg:left-[50%] lg:top-2 lg:-z-10 w-1/3 lg:w-auto hidden lg:block"
           alt="Udots"
         />
         <div className=" bg-heroimg bg-center flex md:block w-[60%] lg:w-[900px] lg:h-[460px] rounded-l-full overflow-hidden shadow-black shadow-[inset_0px_0px_23px_rgba(0,0,0,0.25)]">

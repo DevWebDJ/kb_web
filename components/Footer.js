@@ -56,7 +56,7 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-white border-t-2">
-      <div className="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl overflow-hidden py-12 px-6 lg:px-8">
         <div className="flex-col flex justify-center items-center text-gray-500 text-sm md:text-lg lg:text-xl pb-4">
           <Image
             src={"/logo_normal.svg"}

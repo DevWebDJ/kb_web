@@ -8,7 +8,7 @@ import screw from "../../public/assets/screw.json";
 import server from "../../public/assets/server.json";
 import network from "../../public/assets/network.json";
 
-const Camera = () => {
+const Sysnet = () => {
   return (
     <>
       <Layout>
@@ -28,13 +28,13 @@ const Camera = () => {
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
-            <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl lg:py-16 px-4  md:px-6 lg:px-8">
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-1 lg:gap-8 place-content-center justify-items-center">
                 <div>
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue  md:text-4xl uppercase">
                     Installation de réseaux informatiques (Fibre optique &
                     cuivre)
                   </h3>
@@ -87,7 +87,7 @@ const Camera = () => {
                       <Lottie
                         loop
                         animationData={server}
-                        className=" lg:h-52 lg:-mr-32 lg:-translate-x-32  w-auto"
+                        className=" lg:h-52 md:h-72 lg:-mr-32 lg:-translate-x-10  w-auto"
                       />
                       <p className="lg:w-1/2">
                         Installation de serveur Installation de serveur pour
@@ -111,11 +111,13 @@ const Camera = () => {
                       </p>
                     </div>
                     <div className="mx-auto w-4/5 text-center">
-                    <button
-                        type="button"
-                        className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
-                      >
-                        <Link href={"/devis"}>Demander un Devis</Link>
+                    <button>
+                        <Link
+                          href="/devis"
+                          className="no-underline inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-PBD"
+                        >
+                          Demander un Devis
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -129,4 +131,4 @@ const Camera = () => {
   );
 };
 
-export default Camera;
+export default Sysnet;

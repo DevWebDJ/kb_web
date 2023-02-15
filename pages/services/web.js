@@ -94,13 +94,13 @@ const Web = () => {
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
-            <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl lg:py-16  px-6 lg:px-8">
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                 <div>
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-left lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
+                  <h3 className="mt-2 text-3xl text-center lg:text-left lg:text-5xl font-bold tracking-tight text-primaryBlue  md:text-4xl uppercase">
                     Développement application web & site internet
                   </h3>
                 </div>
@@ -151,8 +151,8 @@ const Web = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-7xl bg-white py-24 px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none lg:text-6xl">
+        <div className="mx-auto max-w-7xl bg-white lg:py-24 px-4  md:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900  md:text-5xl  leading-none lg:text-6xl">
             Créez votre présence en ligne avec nos offres
           </h2>
           <p className="mt-6 max-w-2xl text-xl text-gray-500">
@@ -162,7 +162,7 @@ const Web = () => {
           </p>
 
           {/* Tiers */}
-          <div className="mt-24 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+          <div className="lg:mt-16 mt-5 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
             {pricing.tiers.map((tier) => (
               <div
                 key={tier.title}

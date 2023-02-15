@@ -11,7 +11,7 @@ import { services } from "../data/constant";
 
 const Cards = () => {
   return (
-    <div className="container mx-auto sm:px-6 lg:px-8 py-20 ">
+    <div className="container mx-auto  px-6 lg:px-8 py-20 ">
       <div className="py-10">
         <div className="flex flex-col lg:flex-row items-center lg:gap-2 justify-center lg:justify-start">
           <InformationCircleIcon className="text-primaryBlue lg:w-12 lg:h-12 w-7 md:w-8" />
@@ -66,7 +66,7 @@ const Cards = () => {
             <SwiperSlide>
               {/* Overlapping cards */}
               <section
-                className="relative z-10 mx-auto mt-10  px-4 sm:px-6 lg:px-8 select-none py-10"
+                className="relative z-10 mx-auto mt-10  px-4  px-6 lg:px-8 select-none py-10"
                 aria-labelledby="contact-heading"
               >
                 <h2 className="sr-only" id="contact-heading">

@@ -3,10 +3,10 @@ import Link from "next/link";
 import React from "react";
 import Layout from "../../components/Layout";
 import Lottie from "lottie-react";
-import phone from "../../public/assets/phone.json";
+import phone from "../../public/assets/voipphone.json";
 import screw from "../../public/assets/screw.json";
 
-const Camera = () => {
+const Voip = () => {
   return (
     <>
       <Layout>
@@ -26,13 +26,13 @@ const Camera = () => {
             alt="Bottom Dots"
           />
           <div className="overflow-hidden bg-white">
-            <div className="relative mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl lg:py-16 px-4  md:px-6 lg:px-8">
               <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-1 lg:gap-8 place-content-center justify-items-center">
                 <div>
                   <h2 className="text-lg font-semibold text-primaryBlue uppercase text-center">
                     <Link href={"/services"}>Service</Link>
                   </h2>
-                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue sm:text-4xl uppercase">
+                  <h3 className="mt-2 text-3xl text-center lg:text-5xl font-bold tracking-tight text-primaryBlue  md:text-4xl uppercase">
                     Installation de standard téléphonique & VOIP
                   </h3>
                 </div>
@@ -51,9 +51,9 @@ const Camera = () => {
                       <Lottie
                         loop
                         animationData={phone}
-                        className=" lg:h-48 lg:-mr-7 lg:-translate-x-4 w-auto"
+                        className=" lg:h-32 lg:-mr-3 h-48 lg:-translate-x-5 w-auto"
                       />
-                      <p className="lg:w-1/2">
+                      <p className="lg:w-1/2 text-center lg:text-justify">
                         Nos techniciens sont spécialisés dans
                         l&apos;installation de standards téléphoniques de
                         qualité, qu&apos;il s&apos;agisse de PABX (Private
@@ -65,9 +65,9 @@ const Camera = () => {
                       <Lottie
                         loop
                         animationData={screw}
-                        className=" lg:h-24 lg:-mr-5 lg:-translate-x-2 w-auto"
+                        className=" lg:h-32 lg:-mr-5 h-48 lg:-translate-x-2 w-auto"
                       />
-                      <p className="lg:w-1/2">
+                      <p className="lg:w-1/2 text-center lg:text-justify">
                         Le PABX est relié au réseau de téléphone traditionnel et
                         ne nécessite pas l&apos;utilisation d&apos;Internet.
                         L&apos;IPBX, quant à lui, est nativement connecté à
@@ -86,11 +86,13 @@ const Camera = () => {
                         questions et de vous aider à trouver la solution qui
                         convient le mieux à vos besoins.
                       </p>
-                      <button
-                        type="button"
-                        className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 hover:bg-primaryBlue"
-                      >
-                        <Link href={"/devis"}>Demander un Devis</Link>
+                      <button>
+                        <Link
+                          href="/devis"
+                          className="no-underline inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primaryBlue px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-PBD"
+                        >
+                          Demander un Devis
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -104,4 +106,4 @@ const Camera = () => {
   );
 };
 
-export default Camera;
+export default Voip;

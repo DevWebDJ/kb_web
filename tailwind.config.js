@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     screens: {
-      md: "1024px",
+      md: "768px",
       // => @media (min-width: 1024px) { ... }
 
       lg: "1280px",
@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         heroimg: "url('/assets/hero.jpg')",
-        vid: "url('/assets/vidBG.jpg')",
+        vid: "url('/assets/vidBG1.jpg')",
       },
       colors: {
         primaryBlue: "#0D80FD",

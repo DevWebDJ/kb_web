@@ -45,8 +45,8 @@ const Devis = () => {
             {/* Header */}
             <div className="bg-gray-100/10">
               <div className="py-24 lg:py-32">
-                <div className="relative z-10 mx-auto max-w-7xl pl-4 pr-8 sm:px-6 lg:px-8">
-                  <h1 className="text-4xl font-bold tracking-tight text-primaryBlue sm:text-5xl lg:text-6xl">
+                <div className="relative z-10 mx-auto max-w-7xl pl-4 pr-8  lg:px-8">
+                  <h1 className="text-4xl font-bold tracking-tight text-primaryBlue  lg:text-6xl">
                     Demander un devis
                   </h1>
                   <p className="mt-6 max-w-3xl text-xl text-gray-500 lg:text-justify">
@@ -75,9 +75,9 @@ const Devis = () => {
                 aria-hidden="true"
               />
               {/* Decorative dot pattern */}
-              <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="relative mx-auto max-w-7xl px-4  lg:px-8">
                 <svg
-                  className="absolute top-0 right-0 z-0 -translate-y-16 translate-x-1/2 transform sm:translate-x-1/4 md:-translate-y-24 lg:-translate-y-72"
+                  className="absolute top-0 right-0 z-0 -translate-y-16 translate-x-1/2 transform  md:-translate-y-24 lg:-translate-y-72"
                   width={404}
                   height={384}
                   fill="none"
@@ -110,7 +110,7 @@ const Devis = () => {
                   />
                 </svg>
               </div>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl px-4  lg:px-8">
                 <div className="relative bg-white shadow-xl">
                   <h2 id="contact-heading" className="sr-only">
                     Contact us
@@ -118,10 +118,10 @@ const Devis = () => {
 
                   <div className="grid grid-cols-1 lg:grid-cols-3">
                     {/* Contact information */}
-                    <div className="relative overflow-hidden bg-gradient-to-b from-blue-500 to-PBD py-10 px-6 sm:px-10 xl:p-12">
+                    <div className="relative overflow-hidden bg-gradient-to-b from-blue-500 to-PBD py-10 px-6 ">
                       {/* Decorative angle backgrounds */}
                       <div
-                        className="pointer-events-none absolute inset-0 sm:hidden"
+                        className="pointer-events-none absolute inset-0 "
                         aria-hidden="true"
                       >
                         <svg
@@ -158,7 +158,7 @@ const Devis = () => {
                         </svg>
                       </div>
                       <div
-                        className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 sm:block lg:hidden"
+                        className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-1/2 lg:hidden"
                         aria-hidden="true"
                       >
                         <svg
@@ -322,14 +322,14 @@ const Devis = () => {
                     </div>
 
                     {/* Contact form */}
-                    <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                    <div className="py-10 px-6 md:px-10 lg:col-span-2 xl:p-12">
                       <h3 className="text-lg font-black uppercase text-gray-900">
                         KB Développement
                       </h3>
                       <form
                         action="#"
                         method="POST"
-                        className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                        className="mt-6 grid grid-cols-1 gap-y-6 "
                       >
                         <div>
                           <label
@@ -438,7 +438,7 @@ const Devis = () => {
                             );
                           })}
                         </fieldset>
-                        <div className="sm:col-span-2">
+                        <div className="">
                           <label
                             htmlFor="sector"
                             className="block text-sm font-medium text-gray-900"
@@ -450,7 +450,7 @@ const Devis = () => {
                               {({ open }) => (
                                 <>
                                   <div className="relative mt-1">
-                                    <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 sm:text-sm">
+                                    <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500">
                                       <span className="block truncate">
                                         {selected.name}
                                       </span>
@@ -469,7 +469,7 @@ const Devis = () => {
                                       leaveFrom="opacity-100"
                                       leaveTo="opacity-0"
                                     >
-                                      <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                      <Listbox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ">
                                         {sector.map((person) => (
                                           <Listbox.Option
                                             key={person.id}
@@ -523,7 +523,7 @@ const Devis = () => {
                             </Listbox>
                           </div>
                         </div>
-                        <div className="sm:col-span-2">
+                        <div className="">
                           <div className="flex justify-between">
                             <label
                               htmlFor="message"
@@ -550,10 +550,10 @@ const Devis = () => {
                             />
                           </div>
                         </div>
-                        <div className="sm:col-span-2 sm:flex sm:justify-end">
+                        <div className="">
                           <button
                             type="submit"
-                            className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-PBD focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto"
+                            className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-PBD focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 "
                           >
                             Submit
                           </button>
@@ -567,7 +567,7 @@ const Devis = () => {
 
             {/* Contact grid */}
             <section aria-labelledby="offices-heading">
-              <div className="mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl py-24 px-4 lg:px-8">
                 <h2
                   id="offices-heading"
                   className="text-3xl font-bold tracking-tight text-gray-900"
@@ -579,7 +579,7 @@ const Devis = () => {
                   vulputate id malesuada non. Cras aliquet purus dui laoreet
                   diam sed lacus, fames.
                 </p>
-                <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-4">
                   {offices.map((office) => (
                     <div key={office.id}>
                       <h3 className="text-lg font-medium text-gray-900">
