@@ -6,84 +6,73 @@ import arrow from "../public/assets/cta_arrow.json";
 
 const Hero = () => {
   return (
-    <div className="lg:py-10 flex flex-col lg:flex-row-reverse lg:gap-32 bg-primaryBlue/5">
-      <div className="relative flex justify-between flex-row lg:flex-row-reverse lg:gap-32 items-center lg:py-24 py-5">
-        <Image
-          src={"/assets/udots.svg"}
-          width={243}
-          height={174}
-          className="lg:absolute lg:left-[50%] lg:top-2 lg:-z-10 w-1/3 lg:w-auto hidden lg:block"
-          alt="Udots"
-        />
-        <div className=" bg-heroimg bg-center flex md:block w-[60%] lg:w-[900px] lg:h-[460px] rounded-l-full overflow-hidden shadow-black shadow-[inset_0px_0px_23px_rgba(0,0,0,0.25)]">
-          <div className="w-full h-full -z-10" />
+    <>
+      <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+        <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+          <svg
+            className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
+            viewBox="0 0 100 100"
+            fill="currentColor"
+            preserveAspectRatio="none slice"
+          >
+            <path d="M50 0H100L50 100H0L50 0Z" />
+          </svg>
           <Image
-            src={"/assets/udots_bottom.svg"}
-            width={243}
-            height={174}
-            className="absolute right-0 -mt-11  -z-10 hidden lg:block"
-            alt="Bottom Dots"
+            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+            src="/assets/hero.jpg"
+            alt=""
+            width={1000}
+            height={667}
           />
         </div>
-      </div>
+        <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-lg">
+          <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+            <p className="inline-block py-px mb-4 text-xs font-semibold tracking-wider text-primaryBlue uppercase">
+              éditeur de solutions de Gestion et prestation informatique
+            </p>
+            <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight leading-9 sm:text-4xl sm:leading-none">
+              Notre équipe met son savoir-faire à votre disposition
+            </h2>
+            <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg lg:text-justify">
+              SARL KB Développement est une société spécialisée dans le
+              développement de logiciels de gestion pour les entreprises. Nous
+              proposons une large gamme de solutions adaptées aux besoins de
+              chaque entreprise, ainsi que des prestations de services
+              informatiques. Faites confiance à notre expertise pour améliorer
+              la gestion de votre entreprise.
+            </p>
+            <Image
+              src={"/assets/hero_zigzag.svg"}
+              width={257}
+              height={40}
+              alt="Zigzag"
+            />
+            <div className="max-w-fit py-10">
+              <div className="flex gap-4">
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-9 py-2 text-sm font-medium leading-4 text-PBD hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2"
+                >
+                  <Link href={"/services"}>Nos Services</Link>
+                </button>
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-PBD focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 animate-bounce hover:animate-none"
+                >
+                  <Link href={"/devis"}>Demander un Devis</Link>
+                </button>
+              </div>
 
-      <div className="flex flex-col lg:max-w-xl gap-y-6 justify-center items-center lg:items-start  px-1 md:px-10 lg:px-0">
-        <div className="absolute">
-          <Image
-            src={"/assets/dots.svg"}
-            width={200}
-            height={143}
-            className="relative lg:-left-[200%] -left-[198%] -top-36"
-            alt="Dots"
-          />
-        </div>
-        <div className="max-w-lg leading-9 flex flex-col gap-y-5 text-center lg:text-left">
-          <h1 className=" text-xs md:text-sm text-primaryBlue uppercase font-medium">
-            éditeur de solutions de Gestion et prestation informatique
-          </h1>
-          <h1 className=" text-2xl md:text-3xl lg:text-5xl font-bold leading-9">
-            Notre équipe met son savoir-faire à votre disposition
-          </h1>
-        </div>
-        <p className="text-gray-500 text-center lg:text-left">
-          SARL KB Développement est une société spécialisée dans le
-          développement de logiciels de gestion pour les entreprises. Nous
-          proposons une large gamme de solutions adaptées aux besoins de chaque
-          entreprise, ainsi que des prestations de services informatiques.
-          Faites confiance à notre expertise pour améliorer la gestion de votre
-          entreprise.
-        </p>
-        <Image
-          src={"/assets/hero_zigzag.svg"}
-          width={257}
-          height={40}
-          alt="Zigzag"
-        />
-
-        <div className="max-w-fit">
-          <div className="flex gap-4">
-            <button
-              type="button"
-              className="inline-flex items-center rounded-md border border-transparent bg-indigo-100 px-9 py-2 text-sm font-medium leading-4 text-PBD hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2"
-            >
-              <Link href={"/services"}>Nos Services</Link>
-            </button>
-            <button
-              type="button"
-              className="inline-flex items-center rounded-md border border-transparent bg-PBD px-5 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-PBD focus:outline-none focus:ring-2 focus:ring-primaryBlue focus:ring-offset-2 animate-bounce hover:animate-none"
-            >
-              <Link href={"/devis"}>Demander un Devis</Link>
-            </button>
+              <Lottie
+                loop
+                animationData={arrow}
+                className="-rotate-8 float-right  pt-1   w-1/4"
+              />
+            </div>
           </div>
-
-          <Lottie
-            loop
-            animationData={arrow}
-            className="-rotate-8 float-right  pt-1   w-1/4"
-          />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
