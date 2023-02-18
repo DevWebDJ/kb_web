@@ -7,7 +7,7 @@ import arrow from "../public/assets/cta_arrow.json";
 const Hero = () => {
   return (
     <>
-      <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+      <div className="relative flex flex-col py-2 lg:pt-0 lg:flex-col lg:pb-0">
         <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
           <svg
             className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -30,10 +30,10 @@ const Hero = () => {
             <p className="inline-block py-px mb-4 text-xs font-semibold tracking-wider text-primaryBlue uppercase">
               éditeur de solutions de Gestion et prestation informatique
             </p>
-            <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight leading-9 sm:text-4xl sm:leading-none">
+            <h2 className="mb-5 text-3xl font-black tracking-tight leading-9 sm:text-4xl sm:leading-none uppercase">
               Notre équipe met son savoir-faire à votre disposition
             </h2>
-            <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg lg:text-justify">
+            <p className="pr-5 mb-5 text-base text-gray-500 md:text-lg lg:text-justify">
               SARL KB Développement est une société spécialisée dans le
               développement de logiciels de gestion pour les entreprises. Nous
               proposons une large gamme de solutions adaptées aux besoins de

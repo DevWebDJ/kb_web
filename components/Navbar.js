@@ -17,17 +17,17 @@ export default function Navbar() {
       <div className="mx-auto px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-10">
           <div className="flex justify-start items-center gap-3 lg:w-0 lg:flex-1">
-            <Link href="/">
+            <Link href="/" className="flex items-center gap-2">
               <span className="sr-only">Développement</span>
               <img
-                className="h-10 w-auto  h-12 lg:h-10"
+                className="h-10 w-auto  md:h-12 lg:h-10"
                 src="/logo_small.svg"
                 alt="Logo KB"
               />
+              <h1 className="text-[#1257A3] font-semibold lg:text-base text-sm">
+                Développement
+              </h1>
             </Link>
-            <h1 className="text-[#1257A3] font-semibold lg:text-base text-sm">
-              Développement
-            </h1>
           </div>
           <div className="-my-2 -mr-2 lg:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none ">
@@ -76,7 +76,7 @@ export default function Navbar() {
                   >
                     <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-0 lg:max-w-3xl">
                       <div className="overflow-hidden rounded-lg shadow-lg ">
-                        <div className="relative grid gap-6 bg-white px-5 py-6  gap-8  p-8 lg:grid-cols-2">
+                        <div className="relative grid gap-6 bg-white px-5 py-6  md:gap-8  p-8 lg:grid-cols-2">
                           {services.map((item) => (
                             <a
                               key={item.name}
@@ -204,19 +204,19 @@ export default function Navbar() {
             </div>
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                <Link
+                  href="/software"
+                  className="text-sm font-medium text-gray-900 hover:text-primaryBlue text-center"
                 >
-                  Produits
-                </a>
+                  Nos Logiciels
+                </Link>
 
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                <Link
+                  href="/about"
+                  className="text-sm font-medium text-gray-900 hover:text-primaryBlue text-center"
                 >
                   Qui sommes-nous ?
-                </a>
+                </Link>
               </div>
               <div>
                 <Link
