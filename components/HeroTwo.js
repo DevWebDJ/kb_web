@@ -56,7 +56,7 @@ const HeroTwo = () => {
             <Lottie
               loop
               animationData={Teamwork}
-              className="lg:w-full w-full md:w-3/4 "
+              className="lg:w-4/5 w-full md:w-3/4 "
             />
           </motion.div>
         </div>

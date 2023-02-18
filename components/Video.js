@@ -17,19 +17,22 @@ const Video = () => {
         })
         .join("");
       if (iterations >= e.target.dataset.value.length) clearInterval(interval);
-      iterations += 1 / 2;
+      iterations += 1 / 3;
     }, 30);
   };
 
   return (
     <div className="flex items-center lg:justify-center  flex-col bg-vid lg:h-[1125px] py-10">
       <div className="w-full flex items-center justify-center h-48">
-        <h1
-          className=" text-2xl md:text-4xl lg:text-7xl font-black  lg:pt-10 pt-20  lg:w-1/2  text-center break-words uppercase text-black"
-          onMouseOver={textChanging}
-          data-value="Voyez par vous-même nos services en action"
-        >
-          Voyez par vous-même nos services en action
+        <h1 className=" text-2xl md:text-4xl lg:text-7xl font-black  lg:pt-10 pt-20  lg:w-3/4  text-center break-words uppercase ">
+          Voyez par vous-même nos services{" "}
+          <span
+            data-value="en action."
+            onMouseOver={textChanging}
+            className=" text-transparent bg-clip-text bg-primaryBlue bg-cover "
+          >
+            en action.
+          </span>
         </h1>
       </div>
       <iframe

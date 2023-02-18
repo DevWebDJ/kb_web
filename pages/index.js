@@ -9,6 +9,7 @@ import Cards from "../components/Cards";
 import Clients from "../components/Clients";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import Video from "../components/Video";
+import Link from "next/link";
 
 // const inter = Inter({ subsets: ['latin'] })
 const outfit = Outfit({ subsets: ["latin"] });
@@ -41,20 +42,26 @@ export default function Home() {
           </div>
           <Clients />
           <div className="h-[30vh] flex items-center">
-            <div className=" bg-gradient-to-l from-g1 via-g1 to-g2 w-[80%] lg:h-[120px] rounded-r-full flex justify-center items-center px-10 gap-20">
-              <Image
-                src={"/assets/reaction.png"}
-                height={344}
-                width={550}
-                className=" h-48 w-auto "
-                alt="Emojis Reaction"
-              />
-              <h1 className="text-white text-xl font-bold">
-                suivez-nous sur facebook et retrouvez toute l&apos;actualité de
-                KB Développement
-              </h1>
-              <ArrowTopRightOnSquareIcon className="h-8 w-8 text-white" />
-            </div>
+            <Link
+              href={"https://www.facebook.com/profile.php?id=100057631592030"}
+              target={"_blank"}
+              className="pr-1"
+            >
+              <div className=" bg-gradient-to-l from-g1 via-g1 to-g2 w-full lg:h-[120px] rounded-r-full flex md:justify-center justify-between items-center md:px-10 px-5 lg:gap-20 h-20">
+                <Image
+                  src={"/assets/reaction.png"}
+                  height={344}
+                  width={550}
+                  className=" lg:h-48 w-auto h-16 md:h-auto "
+                  alt="Emojis Reaction"
+                />
+                <h1 className="text-white lg:text-xl md:text-xs text-xs  font-bold flex-1">
+                  suivez-nous sur facebook et retrouvez toute l&apos;actualité
+                  de KB Développement
+                </h1>
+                <ArrowTopRightOnSquareIcon className="md:h-8 md:w-8 w-4 h-4 text-white" />
+              </div>
+            </Link>
           </div>
         </Layout>
       </main>

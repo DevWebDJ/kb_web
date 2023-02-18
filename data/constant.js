@@ -67,3 +67,118 @@ export const services = [
     icon: PhoneIcon,
   },
 ];
+
+export const partners = [
+  {
+    name: "biscorima",
+    src: "/assets/clients/biscorima.jpg",
+  },
+  {
+    name: "bya",
+    src: "/assets/clients/bya.jpg",
+  },
+  {
+    name: "CCBO",
+    src: "/assets/clients/CCBO.jpg",
+  },
+  {
+    name: "cet",
+    src: "/assets/clients/cet.jpg",
+  },
+  {
+    name: "cherrak",
+    src: "/assets/clients/cherrak.png",
+  },
+  {
+    name: "cic",
+    src: "/assets/clients/cic.jpg",
+  },
+  {
+    name: "clinique_Tabet",
+    src: "/assets/clients/clinique_Tabet.png",
+  },
+  {
+    name: "dekinsan1",
+    src: "/assets/clients/dekinsan.jpg",
+  },
+  {
+    name: "dekinsan2",
+    src: "/assets/clients/dekinsan.png",
+  },
+  {
+    name: "eden",
+    src: "/assets/clients/eden.jpg",
+  },
+  {
+    name: "eden2",
+    src: "/assets/clients/eden2.png",
+  },
+  {
+    name: "eden3",
+    src: "/assets/clients/eden3.jpg",
+  },
+  {
+    name: "eden4",
+    src: "/assets/clients/eden4.jpg",
+  },
+  {
+    name: "evacc",
+    src: "/assets/clients/evacc.jpg",
+  },
+  {
+    name: "genepi",
+    src: "/assets/clients/genepi.jpg",
+  },
+  {
+    name: "liberte",
+    src: "/assets/clients/liberte.jpg",
+  },
+  {
+    name: "mekahli",
+    src: "/assets/clients/mekahli.jpg",
+  },
+  {
+    name: "mobis",
+    src: "/assets/clients/mobis.jpg",
+  },
+  {
+    name: "ouest",
+    src: "/assets/clients/ouest.jpg",
+  },
+  {
+    name: "ozgur",
+    src: "/assets/clients/ozgur.jpg",
+  },
+  {
+    name: "palais",
+    src: "/assets/clients/palais.jpg",
+  },
+  {
+    name: "petrogaz",
+    src: "/assets/clients/petrogaz.png",
+  },
+  {
+    name: "plaza",
+    src: "/assets/clients/plaza.jpg",
+  },
+  {
+    name: "sogema",
+    src: "/assets/clients/sogema.png",
+  },
+  {
+    name: "tabet",
+    src: "/assets/clients/tabet.jpg",
+  },
+  {
+    name: "tapino",
+    src: "/assets/clients/tapino.jpg",
+  },
+  {
+    name: "tayal",
+    src: "/assets/clients/tayal.png",
+  },
+  {
+    name: "unilab",
+    src: "/assets/clients/unilab.jpg",
+  },
+];
