@@ -159,8 +159,8 @@ const About = () => {
                           technologiques innovantes pour répondre aux besoins de
                           nos clients. Nous sommes fiers de notre engagement
                           envers la qualité et la satisfaction du client, et
-                          nous nous efforçons constamment d'aller au-delà des
-                          attentes.
+                          nous nous efforçons constamment d&apos;aller au-delà
+                          des attentes.
                         </p>
                       </div>
 
