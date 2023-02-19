@@ -37,6 +37,15 @@ function classNames(...classes) {
 }
 
 const Devis = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    logiciels: false,
+    // add other fields as necessary
+  });
+
+  
   const [selected, setSelected] = useState(sector[0]);
   return (
     <>
