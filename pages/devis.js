@@ -1,42 +1,108 @@
-import React, { Fragment, useState } from "react";
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import Layout from "../components/Layout";
-import { services } from "../data/constant";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import Lottie from "lottie-react";
-import waving from "../public/assets/waving.json";
+import React, { Fragment, useState } from 'react'
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
+import Layout from '../components/Layout'
+import { services } from '../data/constant'
+import { Listbox, Transition } from '@headlessui/react'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import Lottie from 'lottie-react'
+import waving from '../public/assets/waving.json'
+import e from 'cors'
 
 const sector = [
   { id: 0, name: `Selectionnez votre secteur d'activité` },
-  { id: 1, name: "Clinique / Cabinet Médical" },
-  { id: 2, name: "Construction BTP" },
-  { id: 3, name: "Commerce / Distribution" },
-  { id: 4, name: "Immobilier" },
-  { id: 5, name: "Énergie, Mines, Matière première" },
-  { id: 6, name: "Industries" },
-  { id: 7, name: "Informatique/Télécom" },
-  { id: 8, name: "Service publics / Administrations" },
-  { id: 9, name: "Services & Prestations" },
-  { id: 10, name: "Fonction Libérale" },
-  { id: 11, name: "Agroalimentaire" },
-  { id: 12, name: "Hôtellerie & Restauration " },
-  { id: 13, name: "Autre" },
-];
+  { id: 1, name: 'Clinique / Cabinet Médical' },
+  { id: 2, name: 'Construction BTP' },
+  { id: 3, name: 'Commerce / Distribution' },
+  { id: 4, name: 'Immobilier' },
+  { id: 5, name: 'Énergie, Mines, Matière première' },
+  { id: 6, name: 'Industries' },
+  { id: 7, name: 'Informatique/Télécom' },
+  { id: 8, name: 'Service publics / Administrations' },
+  { id: 9, name: 'Services & Prestations' },
+  { id: 10, name: 'Fonction Libérale' },
+  { id: 11, name: 'Agroalimentaire' },
+  { id: 12, name: 'Hôtellerie & Restauration ' },
+  { id: 13, name: 'Autre' },
+]
 const offices = [
   {
     id: 1,
-    city: "Oran",
+    city: 'Oran',
     address: ["15 Boulevard Ibn Dirham l'Hippodrome, Oran, Algérie, 31000"],
   },
-];
+]
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ')
 }
 
 const Devis = () => {
-  const [selected, setSelected] = useState(sector[0]);
+  const [selected, setSelected] = useState(sector[0])
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    secteur: [],
+    activity: selected,
+    besoin: '',
+  })
+  React.useEffect(() => {
+    setFormData({
+      ...formData,
+      activity: selected.name,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected])
+
+  function handleChange(event) {
+    const { name, checked, value, type } = event.target
+    if (type === 'checkbox') {
+      if (checked) {
+        setFormData({
+          ...formData,
+          secteur: [...formData.secteur, name],
+        })
+      } else {
+        setFormData({
+          ...formData,
+          secteur: formData.secteur.filter((item) => item !== name),
+        })
+      }
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      })
+    }
+  }
+
+  const formSubmission = async () => {
+    fetch(`http://localhost:3000/api/contact`, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    })
+  }
+  const handleSubmit = async () => {
+    await formSubmission()
+    console.log(formData)
+  }
+
+  const handleMenuChange = (id, type) => (e) => {
+    if (e.target.checked) {
+      setMenu((prev) => {
+        return { ...prev, [type]: [...prev[type], id] }
+      })
+    } else {
+      setMenu((prev) => {
+        return { ...prev, [type]: prev[type].filter((item) => item !== id) }
+      })
+    }
+  }
+
   return (
     <>
       <Layout>
@@ -341,8 +407,10 @@ const Devis = () => {
                           <div className="mt-1">
                             <input
                               type="text"
-                              name="full-name"
+                              name="fullName"
                               id="full-name"
+                              value={formData.fullName}
+                              onChange={handleChange}
                               autoComplete="name"
                               className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                               required
@@ -362,6 +430,8 @@ const Devis = () => {
                               name="email"
                               type="email"
                               autoComplete="email"
+                              value={formData.email}
+                              onChange={handleChange}
                               className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                               required
                             />
@@ -381,6 +451,8 @@ const Devis = () => {
                               type="text"
                               name="phone"
                               id="phone"
+                              value={formData.phone}
+                              onChange={handleChange}
                               autoComplete="tel"
                               className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                               aria-describedby="phone"
@@ -395,6 +467,8 @@ const Devis = () => {
                           <div className="relative flex items-start">
                             <div className="flex h-5 items-center">
                               <input
+                                value={formData.besoin}
+                                onChange={handleChange}
                                 id="logiciels"
                                 aria-describedby="comments-description"
                                 name="logiciels"
@@ -422,6 +496,7 @@ const Devis = () => {
                                     id={item.name}
                                     aria-describedby="comments-description"
                                     name={item.name}
+                                    onChange={handleChange}
                                     type="checkbox"
                                     className="h-4 w-4 rounded border-gray-300 text-PBD focus:ring-primaryBlue"
                                   />
@@ -435,7 +510,7 @@ const Devis = () => {
                                   </label>
                                 </div>
                               </div>
-                            );
+                            )
                           })}
                         </fieldset>
                         <div className="">
@@ -452,7 +527,7 @@ const Devis = () => {
                                   <div className="relative mt-1">
                                     <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500">
                                       <span className="block truncate">
-                                        {selected.name}
+                                        {selected?.name}
                                       </span>
                                       <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                         <ChevronUpDownIcon
@@ -476,9 +551,9 @@ const Devis = () => {
                                             className={({ active }) =>
                                               classNames(
                                                 active
-                                                  ? "text-white bg-blue-600"
-                                                  : "text-gray-900",
-                                                "relative cursor-default select-none py-2 pl-8 pr-4"
+                                                  ? 'text-white bg-blue-600'
+                                                  : 'text-gray-900',
+                                                'relative cursor-default select-none py-2 pl-8 pr-4'
                                               )
                                             }
                                             value={person}
@@ -488,9 +563,9 @@ const Devis = () => {
                                                 <span
                                                   className={classNames(
                                                     selected
-                                                      ? "font-semibold"
-                                                      : "font-normal",
-                                                    "block truncate"
+                                                      ? 'font-semibold'
+                                                      : 'font-normal',
+                                                    'block truncate'
                                                   )}
                                                 >
                                                   {person.name}
@@ -500,9 +575,9 @@ const Devis = () => {
                                                   <span
                                                     className={classNames(
                                                       active
-                                                        ? "text-white"
-                                                        : "text-blue-600",
-                                                      "absolute inset-y-0 left-0 flex items-center pl-1.5"
+                                                        ? 'text-white'
+                                                        : 'text-blue-600',
+                                                      'absolute inset-y-0 left-0 flex items-center pl-1.5'
                                                     )}
                                                   >
                                                     <CheckIcon
@@ -541,12 +616,14 @@ const Devis = () => {
                           <div className="mt-1">
                             <textarea
                               id="message"
-                              name="message"
+                              name="besoin"
                               rows={4}
                               maxLength={1500}
                               className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-primaryBlue focus:ring-blue-500"
                               aria-describedby="message-max"
-                              defaultValue={""}
+                              defaultValue={''}
+                              value={formData.besoin}
+                              onChange={handleChange}
                             />
                           </div>
                         </div>
@@ -554,6 +631,7 @@ const Devis = () => {
                           <button
                             type="submit"
                             className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-PBD focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 "
+                            onClick={handleSubmit}
                           >
                             Submit
                           </button>
@@ -601,7 +679,7 @@ const Devis = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+}
 
-export default Devis;
+export default Devis
