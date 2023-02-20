@@ -45,7 +45,7 @@ export default function Navbar() {
               href="/software"
               className="text-base font-medium text-gray-500 hover:text-primaryBlue"
             >
-              Nos Logiciels
+              Logiciels de gestion
             </Link>
 
             <Popover className="relative">
@@ -212,9 +212,8 @@ export default function Navbar() {
                   href="/software"
                   className="text-sm font-medium text-gray-900 hover:text-primaryBlue text-center"
                 >
-                  Nos Logiciels
+                  Logiciels de gestion
                 </Link>
-
                 <Link
                   href="/about"
                   className="text-sm font-medium text-gray-900 hover:text-primaryBlue text-center"

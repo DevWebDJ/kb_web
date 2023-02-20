@@ -186,7 +186,7 @@ const Devis = () => {
             </div>
             {/* Contact section */}
             <section
-              className="relative bg-white"
+              className="relative bg-white pb-10"
               aria-labelledby="contact-heading"
             >
               <Lottie
@@ -677,7 +677,7 @@ const Devis = () => {
             </section>
 
             {/* Contact grid */}
-            <section aria-labelledby="offices-heading">
+            {/* <section aria-labelledby="offices-heading">
               <div className="mx-auto max-w-7xl py-24 px-4 lg:px-8">
                 <h2
                   id="offices-heading"
@@ -707,7 +707,7 @@ const Devis = () => {
                   ))}
                 </div>
               </div>
-            </section>
+            </section> */}
           </main>
         </div>
       </Layout>

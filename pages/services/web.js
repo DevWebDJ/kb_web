@@ -11,7 +11,7 @@ const pricing = {
   tiers: [
     {
       title: "Site vitrine",
-      price: 110,
+      price: "110 000",
       frequency: "DA",
       oldPrice: 15,
       description:
@@ -23,11 +23,11 @@ const pricing = {
         "48-hour support response time",
       ],
       cta: "Demander un devis",
-      mostPopular: false,
+      mostPopular: true,
     },
     {
       title: "E-commerce",
-      price: 299,
+      price: "150 000",
       frequency: "DA",
       oldPrice: 400,
       description:
@@ -40,7 +40,7 @@ const pricing = {
         "Marketing automations",
       ],
       cta: "Demander un devis",
-      mostPopular: true,
+      mostPopular: false,
     },
     {
       title: "Application Web",
@@ -178,11 +178,11 @@ const Web = () => {
                     </p>
                   ) : null}
                   <span className=" text-gray-400 text-sm font-semibold">
-                    à partir de
+                    À partir de
                   </span>
                   <p className="mt-4 flex items-baseline text-gray-900">
                     <span className="text-5xl font-bold tracking-tight">
-                      {tier.price} 999
+                      {tier.price}
                     </span>
                     <span className="ml-1 text-xl font-semibold">
                       {tier.frequency}

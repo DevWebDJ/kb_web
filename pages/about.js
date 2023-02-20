@@ -26,7 +26,7 @@ const About = () => {
       animation.stop;
       animationExp.stop;
     };
-  }, []);
+  });
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], [0, -600]);
   return (
@@ -188,17 +188,47 @@ const About = () => {
                 </h2>
                 <div className="mt-6 space-y-6 text-gray-500">
                   <p className="text-lg">
-                    En confiant vos besoins informatiques à KB Développement,
-                    vous bénéficiez d&apos;une expertise complète et d&apos;une
-                    approche sur mesure. Nous prenons le temps de comprendre vos
-                    besoins et de vous proposer les solutions les plus adaptées
-                    à votre entreprise.
+                    Chez KB Développement, nous sommes convaincus que chaque
+                    entreprise a des besoins informatiques spécifiques qui
+                    doivent être pris en compte pour garantir un fonctionnement
+                    optimal et une croissance durable. C&apos;est pourquoi nous
+                    avons adopté une approche sur mesure, qui nous permet de
+                    comprendre parfaitement les exigences de nos clients et de
+                    leur proposer des solutions informatiques personnalisées et
+                    adaptées.
                   </p>
                   <p className="text-base leading-7">
-                    Notre équipe de professionnels qualifiés est à votre
-                    disposition pour vous accompagner dans tous vos projets
-                    informatiques. Nous vous garantissons un service de qualité
-                    et une réactivité maximale en cas de problème.
+                    Notre expertise s&apos;étend à tous les domaines de
+                    l&apos;informatique : du développement de logiciels à la
+                    gestion de réseaux, en passant par la sécurité des données
+                    et la formation des utilisateurs. Nous sommes en mesure de
+                    gérer des projets de toutes tailles et de toutes
+                    complexités, et nous nous engageons à vous offrir un service
+                    complet et professionnel à chaque étape du processus.
+                  </p>
+                  <p className="text-base leading-7">
+                    Mais ce qui fait réellement la différence chez KB
+                    Développement, c&apos;est notre équipe de professionnels
+                    qualifiés et passionnés. Chacun de nos collaborateurs est un
+                    expert dans son domaine, doté d&apos;une solide expérience
+                    et d&apos;une connaissance approfondie des dernières
+                    tendances et des technologies émergentes. Nous sommes fiers
+                    de travailler avec des personnes talentueuses et engagées,
+                    qui sont toujours prêtes à aller plus loin pour satisfaire
+                    les besoins de nos clients. En choisissant KB Développement
+                    pour vos besoins informatiques, vous pouvez être sûr de
+                    bénéficier d&apos;un service de qualité supérieure et
+                    d&apos;une réactivité maximale en cas de problème.
+                  </p>
+                  <p className="text-base leading-7">
+                    Nous sommes à l&apos;écoute de nos clients et nous nous
+                    engageons à répondre rapidement à toutes les demandes, afin
+                    de minimiser les temps d&apos;arrêt et de maximiser la
+                    productivité de votre entreprise. Alors n&apos;hésitez plus
+                    : confiez-nous vos projets informatiques et laissez-nous
+                    vous aider à atteindre vos objectifs commerciaux. Chez KB
+                    Développement, nous sommes là pour vous accompagner à chaque
+                    étape de votre croissance.
                   </p>
                 </div>
               </div>

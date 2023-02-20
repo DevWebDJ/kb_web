@@ -10,6 +10,7 @@ import Clients from "../components/Clients";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import Video from "../components/Video";
 import Link from "next/link";
+import CTA from "../components/CTA";
 
 // const inter = Inter({ subsets: ['latin'] })
 const outfit = Outfit({ subsets: ["latin"] });
@@ -41,7 +42,7 @@ export default function Home() {
             <Cards />
           </div>
           <Clients />
-          <div className="h-[30vh] flex items-center">
+          <div className="lg:h-[30vh] py-14 lg:py-0 flex items-center">
             <Link
               href={"https://www.facebook.com/profile.php?id=100057631592030"}
               target={"_blank"}
@@ -52,7 +53,7 @@ export default function Home() {
                   src={"/assets/reaction.png"}
                   height={344}
                   width={550}
-                  className=" lg:h-48 w-auto h-16 md:h-auto "
+                  className=" lg:h-48 w-auto h-16 md:h-28 "
                   alt="Emojis Reaction"
                 />
                 <h1 className="text-white lg:text-xl md:text-xs text-xs  font-bold flex-1">
@@ -63,6 +64,7 @@ export default function Home() {
               </div>
             </Link>
           </div>
+          <CTA />
         </Layout>
       </main>
     </>

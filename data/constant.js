@@ -182,3 +182,80 @@ export const partners = [
     src: "/assets/clients/unilab.jpg",
   },
 ];
+
+export const softwareList = [
+  {
+    name: "Gestion Paie & Ressources humaines",
+    desc: "un logiciel qui permet de gérer les salaires et les fiches de paie des employés, ainsi que d'autres aspects des ressources humaines, tels que la gestion des congés, des absences et des performances.",
+    price: "80 000",
+    features: [
+      "Simulation Rappel",
+      "CACOBATPH",
+      "Frais de Mission",
+      "Documents Joints",
+      "Habilitations et port d'armes",
+      "Dotation",
+      "Suivi Recrutement",
+    ],
+  },
+  {
+    name: "Gestion de stock et Facturation",
+    desc: "un logiciel qui permet de suivre les niveaux de stock d'une entreprise et de générer des factures pour les ventes. Il peut également aider à gérer les commandes, les livraisons et les retours de marchandise.",
+    price: "120 000",
+    features: [
+      "Production",
+      "Importation",
+      "Distribution",
+      "Suivi des emplacements",
+      "Gestion des lots",
+      "Gestion immobilisation",
+      "Vente bois et dérivés",
+      "Situation croisé (client fournisseur)",
+      "Suivi échéancier (client fournisseur",
+      "Situation des chauffeurs",
+      "Traitement comptable",
+      "Version multi-taxe",
+      "Version Avancée (droits d'accès par dossier)",
+      "Suivi bancaire et impression chèque",
+      "Demande d'achat et note de frais",
+      "Pont Bascule",
+    ],
+  },
+  {
+    name: "Comptabilité",
+    desc: "un logiciel qui permet de gérer les finances d'une entreprise, notamment en effectuant des tâches telles que la tenue de livres comptables, la gestion des factures et des paiements, la gestion des budgets et la génération de rapports financiers.",
+    price: "100 000",
+    features: ["Rapprochement bancaire", "Analytique"],
+  },
+  {
+    name: "Promotion Immobilière",
+    desc: "un logiciel qui permet de gérer les projets immobiliers, y compris la gestion des propriétés, des ventes, des locations et des contrats.",
+    price: "100 000",
+    features: ["Licence Logiciel Promotion Immobilière"],
+  },
+  {
+    name: "Gestion École",
+    desc: "un logiciel qui permet de gérer les activités quotidiennes d'une école, notamment la gestion des étudiants, des enseignants, des horaires, des notes et des calendriers scolaires.",
+    price: "100 000",
+    features: ["Licence Gestion École"],
+  },
+  {
+    name: "Gestion Clinique",
+    desc: "un logiciel qui permet de gérer les opérations d'une clinique, notamment la gestion des patients, des rendez-vous, des dossiers médicaux et des facturations.",
+    price: "120 000",
+    features: [
+      "Imagerie médicale",
+      "Laboratoire",
+      "Hospitalisation",
+      "Facturation",
+    ],
+  },
+  {
+    name: "Gestion Cabinet Médical",
+    desc: "un logiciel qui permet de gérer les opérations d'un cabinet médical, notamment la gestion des patients, des rendez-vous, des dossiers médicaux et des facturations.",
+    price: "60 000",
+    features: [
+      "1 Poste supplémentaire gratuit + Licence Gestion Cabinet Médical",
+    ],
+  },
+];

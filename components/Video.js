@@ -39,7 +39,7 @@ const Video = () => {
         className=" shadow-md lg:w-3/4 w-full lg:h-3/5 px-2 h-96 lg:translate-y-12"
         width="1920"
         height="1080"
-        src="https://www.youtube.com/embed/7I8O2E5BHDo?rel=0&color=white"
+        src="https://www.youtube.com/embed/K9gYbwzOEcI?rel=0&color=white"
         title="KB Développement | tout sous un même toît"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
