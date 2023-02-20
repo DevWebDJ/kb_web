@@ -16,6 +16,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 const Clients = () => {
   const ref = useRef(null);
@@ -60,47 +61,6 @@ const Clients = () => {
               </div>
             </div>
           </div>
-          {/* <div className="mt-8 lg:grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2 hidden">
-            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-              <img className="max-h-12" src="" alt="Workcation" />
-            </div>
-            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                alt="Mirage"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                alt="Tuple"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
-                alt="Laravel"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-                alt="Statamic"
-              />
-            </div>
-          </div> */}
-
           <div className="py-4">
             <Swiper
               slidesPerView={3}
@@ -133,10 +93,13 @@ const Clients = () => {
                         key={index}
                         className="col-span-1 flex justify-center bg-gray-50 py-8 px-8"
                       >
-                        <img
+                        <Image
                           className="max-h-24"
                           src={clients.src}
                           alt={clients.name}
+                          height={300}
+                          width={300}
+                          
                         />
                       </div>
                     </SwiperSlide>

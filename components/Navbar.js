@@ -19,10 +19,12 @@ export default function Navbar() {
           <div className="flex justify-start items-center gap-3 lg:w-0 lg:flex-1">
             <Link href="/" className="flex items-center gap-2">
               <span className="sr-only">Développement</span>
-              <img
+              <Image
                 className="h-10 w-auto  md:h-12 lg:h-10"
                 src="/logo_small.svg"
                 alt="Logo KB"
+                height={50}
+                width={50}
               />
               <h1 className="text-[#1257A3] font-semibold lg:text-base text-sm">
                 Développement
@@ -169,10 +171,12 @@ export default function Navbar() {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
+                  <Image
                     className="h-10 w-auto"
                     src="/logo_normal.svg"
                     alt="KB Développement"
+                    height={50}
+                    width={50}
                   />
                 </div>
                 <div className="-mr-2">

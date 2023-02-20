@@ -82,6 +82,11 @@ const offices = [
     city: "Oran",
     address: ["15 Boulevard Ibn Dirham l'Hippodrome, Oran, Algérie, 31000"],
   },
+  {
+    id: 2,
+    city: "Oran",
+    address: ["15 Boulevard Ibn Dirham l'Hippodrome, Oran, Algérie, 31000"],
+  },
 ];
 
 function classNames(...classes) {
@@ -237,7 +242,7 @@ const Devis = () => {
 
                   <div className="grid grid-cols-1 lg:grid-cols-3">
                     {/* Contact information */}
-                    <div className="relative overflow-hidden bg-gradient-to-b from-blue-500 to-PBD py-10 px-6 ">
+                    <div className="relative overflow-hidden bg-gradient-to-b from-blue-500 to-PBD py-10 px-6 rounded-l-lg">
                       {/* Decorative angle backgrounds */}
                       <div
                         className="pointer-events-none absolute inset-0 "
@@ -378,7 +383,7 @@ const Devis = () => {
                       </dl>
                       <ul role="list" className="mt-8 flex space-x-12">
                         {navigation.social.map((item) => (
-                          <li>
+                          <li key={item}>
                             <Link
                               target="_blank"
                               key={item.name}
@@ -678,7 +683,7 @@ const Devis = () => {
                   id="offices-heading"
                   className="text-3xl font-bold tracking-tight text-gray-900"
                 >
-                  Our offices
+                  Nos bureaux
                 </h2>
                 <p className="mt-6 max-w-3xl text-lg text-gray-500">
                   Varius facilisi mauris sed sit. Non sed et duis dui leo,
@@ -688,7 +693,7 @@ const Devis = () => {
                 <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-4">
                   {offices.map((office) => (
                     <div key={office.id}>
-                      <h3 className="text-lg font-medium text-gray-900">
+                      <h3 className="text-lg font-bold text-gray-900">
                         {office.city}
                       </h3>
                       <p className="mt-2 text-base text-gray-500">

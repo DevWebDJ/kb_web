@@ -137,11 +137,16 @@ const About = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-PBD  opacity-90" />
                   <div className="relative px-8">
                     <div>
-                      <img
-                        className="h-12"
-                        src="https://tailwindui.com/img/logos/workcation.svg?color=white"
-                        alt="Test"
-                      />
+                      <span className="flex text-white font-bold items-center gap-1">
+                        <Image
+                          src={"/favicon_Dtheme.svg"}
+                          height={200}
+                          width={200}
+                          alt="KB"
+                          className="h-10 w-auto"
+                        />
+                        &nbsp;Développement&nbsp;
+                      </span>
                     </div>
                     <blockquote className="mt-8">
                       <div className="relative text-lg font-medium text-white md:flex-grow">

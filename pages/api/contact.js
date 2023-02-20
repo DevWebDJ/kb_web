@@ -3,9 +3,9 @@ import { mailOptions, transporter } from "./transporter";
 const handler = async (req, res) => {
   if (req.method === "POST") {
     const data = req.body;
-    const test = `${data.fullName}`;
+    const nom = `${data.fullName}`;
     const message = `
-  Nom & Prénom : ${data.fullName}\r\n
+  <b>Nom & Prénom</b> : ${data.fullName}\r\n
   Nom de l'entreprise : ${data.entreprise}\r\n
   Adresse Mail : ${data.email}\r\n
   Numéro de téléphone : ${data.phone}\r\n
@@ -27,7 +27,7 @@ const handler = async (req, res) => {
     try {
       await transporter.sendMail({
         ...mailOptions,
-        subject: `Demande de devis - ${test}`,
+        subject: `Demande de devis - ${nom}`,
         text: message,
         html: message.replace(/\r\n/g, "<br>"),
       });
