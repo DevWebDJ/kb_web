@@ -135,20 +135,21 @@ const Devis = () => {
     }
   }
 
-  // const formSubmission = async () => {
-  //   fetch(`/api/contact`, {
-  //     method: "POST",
-  //     body: JSON.stringify(formData),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //   });
-  // };
+  const formSubmission = async () => {
+    fetch(`api/contact`, {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+  };
   const handleSubmit = async () => {
     console.log(formData);
     try {
-      await sendContactForm(formData);
+      // await sendContactForm(formData);
+      await formSubmission(formData);
     } catch (error) {
       console.log(error);
       setError({
