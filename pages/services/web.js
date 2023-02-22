@@ -11,51 +11,61 @@ const pricing = {
   tiers: [
     {
       title: "Site vitrine",
-      price: "110 000",
+      price: "120 000",
       frequency: "DA",
-      oldPrice: 15,
+      oldPrice: "150 000 DA",
       description:
         "Présentez votre entreprise de manière professionnelle avec notre offre de Site Vitrine !",
       features: [
-        "5 products",
-        "Up to 1,000 subscribers",
-        "Basic analytics",
-        "48-hour support response time",
+        "Nom de domaine gratuit et personnalisé",
+        "Performances optimales",
+        "Conception UX personnalisée",
+        "Intégration de votre charte graphique",
+        "Édition complète de votre contenu",
+        "Respect des normes du web et SEO",
+        "Conseils et support technique de qualité",
       ],
       cta: "Demander un devis",
       mostPopular: true,
     },
     {
       title: "E-commerce",
-      price: "150 000",
+      price: "200 000",
       frequency: "DA",
-      oldPrice: 400,
+      oldPrice: "400 000 DA",
       description:
         "Boostez vos ventes en ligne avec notre offre de Site E-commerce !",
       features: [
-        "25 products",
-        "Up to 10,000 subscribers",
-        "Advanced analytics",
-        "24-hour support response time",
-        "Marketing automations",
+        "Design moderne, responsive et UX adaptée",
+        "Respect des normes du web et SEO",
+        "Conseils et support technique de qualité",
+        "Gestion des promotions et des codes promo",
+        "Intégration de Facebook Pixel pour un suivi des conversions publicitaires",
+        "Gestion avancée des produits et du stock",
+        "Nom de domaine gratuit et personnalisé",
+        "Gestion des commandes et des frais de livraison",
       ],
       cta: "Demander un devis",
       mostPopular: false,
     },
     {
-      title: "Application Web",
-      price: 160,
+      title: "Application Web sur mesure",
+      price: "1200 k",
       frequency: "DA",
-      oldPrice: 250,
+      oldPrice: "1600 k DA",
       description:
         "Améliorez l'expérience utilisateur avec notre offre d'Application Web !",
       features: [
-        "Unlimited products",
-        "Unlimited subscribers",
-        "Advanced analytics",
-        "1-hour, dedicated support response time",
-        "Marketing automations",
-        "Custom integrations",
+        "Analyse des besoins de l'entreprise et des utilisateurs",
+        "Conception UX/UI personnalisée",
+        "Développement d'une application web sur mesure",
+        "Intégration de fonctionnalités spécifiques à l'entreprise",
+        "Intégration de systèmes tiers (API)",
+        "Tests de qualité et d'assurance",
+        "Déploiement et configuration de l'application web sur un environnement de production",
+        "Formation des utilisateurs et documentation technique",
+        "Maintenance et support technique",
+        "Mises à jour régulières et évolution de l'application en fonction des besoins de l'entreprise",
       ],
       cta: "Demander un devis",
       mostPopular: false,
@@ -189,7 +199,7 @@ const Web = () => {
                     </span>
                   </p>
                   <p className=" text-center md:text-left lg:text-right line-through font-semibold text-gray-400 text-lg ">
-                    {tier.oldPrice} 000 DA
+                    {tier.oldPrice}
                   </p>
                   <p className="mt-6 text-gray-500">{tier.description}</p>
 

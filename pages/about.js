@@ -8,6 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import Banner from "../components/Banner";
 
 const About = () => {
   const today = new Date();
@@ -32,57 +33,8 @@ const About = () => {
   return (
     <>
       <Layout>
-        <motion.div className="h-[20dvh] flex justify-center items-center overflow-hidden bg-primaryBlue ">
-          <motion.h1
-            style={{
-              x: x,
-            }}
-            className="text-6xl uppercase font-bold w-full whitespace-nowrap stroke-black  text-white flex gap-36"
-          >
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-          </motion.h1>
-        </motion.div>
-
-        <div className="relative bg-white py-16  md:py-24">
+        <Banner />
+        <div className="relative bg-white pb-16  md:pb-24">
           <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
             <div className="relative  py-16 lg:py-0">
               <div
@@ -133,7 +85,7 @@ const About = () => {
                     src={"/assets/1.jpg"}
                     alt="test"
                   />
-                  <div className="absolute inset-0 bg-primaryBlue mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-primaryBlue/10 mix-blend-multiply" />
                   <div className="absolute inset-0 bg-gradient-to-t from-PBD  opacity-90" />
                   <div className="relative px-8">
                     <div>
@@ -182,8 +134,8 @@ const About = () => {
 
             <div className="relative mx-auto max-w-md px-4  md:max-w-3xl  md:px-6 lg:px-0">
               {/* Content area */}
-              <div className="pt-12  md:pt-16 lg:pt-20">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900  md:text-4xl uppercase">
+              <div className="pt-0  md:pt-16 lg:pt-20">
+                <h2 className="text-4xl font-black tracking-tight text-gray-900  md:text-4xl uppercase">
                   Plus qu&apos;une entreprise
                 </h2>
                 <div className="mt-6 space-y-6 text-gray-500">
@@ -259,55 +211,57 @@ const About = () => {
             </div>
           </div>
         </div>
-        <motion.div className="h-[20dvh] flex justify-center items-center overflow-hidden bg-primaryBlue ">
-          <motion.h1
-            style={{
-              x: x,
-            }}
-            className="text-6xl uppercase font-bold w-full whitespace-nowrap stroke-black  text-white flex gap-36"
-          >
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-            <span className="flex">
-              <Image
-                src={"/favicon_Dtheme.svg"}
-                height={200}
-                width={200}
-                alt="KB"
-                className="h-20 w-auto"
-              />
-              &nbsp;Développement&nbsp;
-            </span>
-          </motion.h1>
-        </motion.div>
+        {/* <div className="overflow-clip  rounded-xl -translate-y-36 w-11/12 rotate-6 flex justify-center">
+          <motion.div className="h-[20dvh] flex justify-center items-center overflow-hidden bg-gray-300 w-[120vw] ">
+            <motion.h1
+              style={{
+                x: x,
+              }}
+              className="text-6xl uppercase font-bold w-full whitespace-nowrap stroke-black  text-white flex gap-36"
+            >
+              <span className="flex">
+                <Image
+                  src={"/favicon_Dtheme.svg"}
+                  height={200}
+                  width={200}
+                  alt="KB"
+                  className="h-20 w-auto"
+                />
+                &nbsp;Développement&nbsp;
+              </span>
+              <span className="flex">
+                <Image
+                  src={"/favicon_Dtheme.svg"}
+                  height={200}
+                  width={200}
+                  alt="KB"
+                  className="h-20 w-auto"
+                />
+                &nbsp;Développement&nbsp;
+              </span>
+              <span className="flex">
+                <Image
+                  src={"/favicon_Dtheme.svg"}
+                  height={200}
+                  width={200}
+                  alt="KB"
+                  className="h-20 w-auto"
+                />
+                &nbsp;Développement&nbsp;
+              </span>
+              <span className="flex">
+                <Image
+                  src={"/favicon_Dtheme.svg"}
+                  height={200}
+                  width={200}
+                  alt="KB"
+                  className="h-20 w-auto"
+                />
+                &nbsp;Développement&nbsp;
+              </span>
+            </motion.h1>
+          </motion.div>
+        </div> */}
       </Layout>
     </>
   );

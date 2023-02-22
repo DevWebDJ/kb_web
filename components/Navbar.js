@@ -42,6 +42,12 @@ export default function Navbar() {
             className="hidden space-x-10 lg:flex lg:items-center"
           >
             <Link
+              href="/"
+              className="text-base font-medium text-gray-500 hover:text-primaryBlue"
+            >
+              Accueil
+            </Link>
+            <Link
               href="/software"
               className="text-base font-medium text-gray-500 hover:text-primaryBlue"
             >
@@ -181,7 +187,7 @@ export default function Navbar() {
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-primaryBlue focus:outline-none">
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">Fermer</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>

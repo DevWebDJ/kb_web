@@ -9,6 +9,7 @@ const Access = () => {
   return (
     <>
       <Layout>
+        
         <div className="relative z-0 py-10">
           <Image
             src={"/assets/udots_bottom.svg"}

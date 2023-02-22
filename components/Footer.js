@@ -6,6 +6,7 @@ import Copyright from "./Copyright";
 
 const navigation = {
   main: [
+    { name: "Accueil", href: "/" },
     { name: "Nos Logiciels", href: "/software" },
     { name: "Services", href: "/services/" },
     { name: "Qui sommes-nous ?", href: "/about" },
@@ -66,7 +67,7 @@ export default function Footer() {
             className="pb-4"
             alt="Logo"
           />
-          <h1>Logiciels, Solutions Web, Réseau, Sécurité</h1>
+          <h1>Logiciels, Solutions Web, Réseau, Caméra</h1>
           <h1 className="font-bold text-primaryBlue">Un seul partenaire.</h1>
         </div>
         <nav

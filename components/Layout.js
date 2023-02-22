@@ -10,8 +10,6 @@ const Layout = (props) => {
   return (
     <div className={outfit.className}>
       <Head>
-        <title>KB Développement</title>
-        <meta name="description" content="KB Développement" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </Head>
