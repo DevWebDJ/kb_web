@@ -136,7 +136,7 @@ const Devis = () => {
   }
 
   const formSubmission = async () => {
-    fetch(`api/contact`, {
+    fetch(`/api/contact`, {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
@@ -148,8 +148,7 @@ const Devis = () => {
   const handleSubmit = async () => {
     console.log(formData);
     try {
-      // await sendContactForm(formData);
-      await formSubmission(formData);
+      await sendContactForm(formData);
     } catch (error) {
       console.log(error);
       setError({
