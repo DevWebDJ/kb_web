@@ -4,10 +4,9 @@
   "private": true,
   "homepage": "https://www.kbdev.co",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint",
     "serve": "serve out"
   },
   "dependencies": {

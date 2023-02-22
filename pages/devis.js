@@ -9,6 +9,7 @@ import waving from "../public/assets/waving.json";
 import e from "cors";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import { sendContactForm } from "../lib/api";
 
 const navigation = {
   main: [
@@ -134,19 +135,27 @@ const Devis = () => {
     }
   }
 
-  const formSubmission = async () => {
-    fetch(`http://localhost:3000/api/contact`, {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-  };
+  // const formSubmission = async () => {
+  //   fetch(`/api/contact`, {
+  //     method: "POST",
+  //     body: JSON.stringify(formData),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //   });
+  // };
   const handleSubmit = async () => {
-    await formSubmission();
     console.log(formData);
+    try {
+      await sendContactForm(formData);
+    } catch (error) {
+      console.log(error);
+      setError({
+        ...error,
+        general: "Une erreur s'est produite lors de l'envoi du formulaire",
+      });
+    }
   };
 
   const handleMenuChange = (id, type) => (e) => {
