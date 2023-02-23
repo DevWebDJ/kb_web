@@ -148,7 +148,8 @@ const Devis = () => {
   const handleSubmit = async () => {
     console.log(formData);
     try {
-      await sendContactForm(formData);
+      await formSubmission(formData);
+      // sendContactForm(formData);
     } catch (error) {
       console.log(error);
       setError({
